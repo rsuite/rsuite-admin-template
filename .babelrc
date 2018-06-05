@@ -1,0 +1,11 @@
+{
+  "presets": ["env", "stage-1", "react", "rsuite"],
+  "plugins": [
+    "lodash",
+    "transform-proto-to-assign",
+    "transform-runtime",
+    "add-module-exports",
+    "react-hot-loader/babel",
+    "transform-dev"
+  ]
+}
