@@ -2,7 +2,7 @@
 
 这是一个 React Suite 示例项目
 
-![demo](./readme.png)
+![demo](./readme.jpg)
 
 
 ## 开发
