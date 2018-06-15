@@ -31,14 +31,15 @@
     "url": "git@github.com:rsuite/rsuite-management-system.git"
   },
   "dependencies": {
+    "classnames": ">=2.0.0",
     "moment": "^2.20.1",
-    "rsuite": "^3.0.2",
-    "rsuite-utils": "^1.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.0",
-    "react-router": "3.2.0"
+    "react-router": "3.2.0",
+    "rsuite": "^3.1.0",
+    "rsuite-utils": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^0.14.9 || >=15.3.0",
@@ -64,7 +65,6 @@
     "brfs": "^1.4.3",
     "chai": "^3.5.0",
     "child-process-promise": "^2.0.2",
-    "classnames": ">=2.0.0",
     "compression-webpack-plugin": "^1.0.1",
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
