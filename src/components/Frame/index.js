@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from 'react';
+import classNames from 'classnames';
 import { Container, Sidebar, Sidenav, Icon, Header, Content, Dropdown, Nav } from 'rsuite';
 import NavToggle from './NavToggle';
 import { getHeight } from 'dom-lib';
@@ -31,6 +32,10 @@ class Frame extends React.Component<Props, State> {
     const { children } = this.props;
     const { expand, windowHeight } = this.state;
 
+    const containerClasses = classNames('page-container', {
+      'container-full': !expand
+    });
+
     return (
       <Container className="frame">
         <Sidebar
@@ -59,6 +64,7 @@ class Frame extends React.Component<Props, State> {
                   Members
                 </Nav.Item>
                 <Dropdown
+                  placement="rightTop"
                   eventKey="3"
                   trigger="hover"
                   title="Advanced"
@@ -71,6 +77,7 @@ class Frame extends React.Component<Props, State> {
                   <Dropdown.Item eventKey="3-5">Visit Depth</Dropdown.Item>
                 </Dropdown>
                 <Dropdown
+                  placement="rightTop"
                   eventKey="4"
                   trigger="hover"
                   title="Settings"
@@ -88,7 +95,7 @@ class Frame extends React.Component<Props, State> {
           <NavToggle expand={expand} onChange={this.handleToggle} />
         </Sidebar>
 
-        <Container>
+        <Container className={containerClasses}>
           <Content>{children}</Content>
         </Container>
       </Container>
