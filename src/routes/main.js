@@ -4,5 +4,5 @@ export default {
     console.log('enter main');
   },
   component: Frame,
-  childRoutes: [require('./list'), require('./dashboard'), require('./exception')]
+  childRoutes: [require('./list'), require('./dashboard'), require('./error')]
 };

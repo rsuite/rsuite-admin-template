@@ -57,7 +57,7 @@ module.exports = {
         })
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|svg)$/,
         //`publicPath`  only use to assign assets path in build
         use: [
           {
@@ -82,18 +82,6 @@ module.exports = {
               digest: 'hex',
               name: 'resources/[hash].[ext]',
               publicPath: '/'
-            }
-          }
-        ]
-      },
-      {
-        test: /\.svg$/,
-        exclude: [rsuiteStylePath],
-        use: [
-          {
-            loader: 'svg-sprite-loader',
-            options: {
-              symbolId: 'icon-[name]'
             }
           }
         ]

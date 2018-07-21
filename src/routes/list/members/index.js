@@ -1,6 +1,6 @@
 import DataTable from './DataTable';
 
 export default {
-  path: 'data-table',
+  path: 'members',
   component: DataTable
 };

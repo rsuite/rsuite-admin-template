@@ -52,7 +52,7 @@ class DataList extends React.Component<Props> {
           </div>
 
           <Table
-            height={getHeight(window) - 200}
+            autoHeight
             data={data}
             onRowClick={data => {
               console.log(data);

@@ -1,4 +1,4 @@
 export default {
   path: '/list',
-  childRoutes: [require('./data-table')]
+  childRoutes: [require('./members')]
 };

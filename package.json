@@ -11,6 +11,7 @@
     "clear-dist": "rm -rf dist",
     "build-webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "build": "npm run clear-dist && npm run build-webpack",
+    "publish-github": "node gh-pages.js",
     "test": "karma start"
   },
   "keywords": [
@@ -37,8 +38,9 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.0",
+    "react-intl": "^2.4.0",
     "react-router": "3.2.0",
-    "rsuite": "^3.1.0",
+    "rsuite": "^3.2.1",
     "rsuite-utils": "^1.0.0"
   },
   "peerDependencies": {
@@ -74,6 +76,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "fs-promise": "^0.5.0",
+    "gh-pages": "^1.2.0",
     "glob": "^7.0.3",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^3.0.6",
