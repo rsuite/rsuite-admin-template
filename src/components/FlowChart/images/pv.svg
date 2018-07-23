@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="90px" viewBox="0 0 206 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="42.9775939%" cy="37.2628945%" fx="42.9775939%" fy="37.2628945%" r="60.600998%" gradientTransform="translate(0.429776,0.372629),scale(1.000000,0.785714),rotate(36.976459),translate(-0.429776,-0.372629)" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="0" y="0" width="66" height="84" rx="6"></rect>
+        <rect id="path-3" x="0" y="0" width="66" height="84" rx="6"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5-Copy">
+            <g id="Group-3" opacity="0.300000012" transform="translate(0.000000, 3.000000)">
+                <g id="Rectangle-6">
+                    <use fill="#575757" xlink:href="#path-2"></use>
+                    <use fill="url(#radialGradient-1)" style="mix-blend-mode: overlay;" xlink:href="#path-2"></use>
+                </g>
+                <rect id="Rectangle-6" fill="#FFFFFF" x="6" y="23" width="54" height="27"></rect>
+                <rect id="Rectangle-6" fill="#FFFFFF" x="5" y="16" width="56" height="2" rx="1"></rect>
+                <g id="Group-2" transform="translate(7.000000, 8.000000)" fill="#FFFFFF">
+                    <path d="M10,4 C8.8954305,4 8,3.1045695 8,2 C8,0.8954305 8.8954305,0 10,0 C11.1045695,0 12,0.8954305 12,2 C12,3.1045695 11.1045695,4 10,4 Z" id="Combined-Shape"></path>
+                    <circle id="Combined-Shape" cx="2" cy="2" r="2"></circle>
+                    <circle id="Combined-Shape" cx="18" cy="2" r="2"></circle>
+                </g>
+                <g id="Stacked-Group" transform="translate(5.000000, 56.000000)" fill="#FFFFFF">
+                    <rect id="Rectangle-6" x="0" y="0" width="56" height="2" rx="1"></rect>
+                    <rect id="Rectangle-6" x="0" y="20" width="46" height="2" rx="1"></rect>
+                    <rect id="Rectangle-6" x="0" y="15" width="56" height="2" rx="1"></rect>
+                    <rect id="Rectangle-6" x="0" y="10" width="56" height="2" rx="1"></rect>
+                    <rect id="Rectangle-6" x="0" y="5" width="56" height="2" rx="1"></rect>
+                </g>
+            </g>
+            <g id="Group-3" opacity="0.300000012" transform="translate(140.000000, 3.000000)">
+                <g id="Rectangle-6">
+                    <use fill="#575757" xlink:href="#path-3"></use>
+                    <use fill="url(#radialGradient-1)" style="mix-blend-mode: overlay;" xlink:href="#path-3"></use>
+                </g>
+                <g id="Stacked-Group" transform="translate(6.000000, 54.000000)" fill="#FFFFFF">
+                    <rect id="Rectangle-6" x="5" y="0" width="44" height="2" rx="1"></rect>
+                    <rect id="Rectangle-6" x="10" y="10" width="34" height="2" rx="1"></rect>
+                    <rect id="Rectangle-6" x="0" y="5" width="54" height="2" rx="1"></rect>
+                </g>
+                <rect id="Rectangle-6" fill="#FFFFFF" x="6" y="70" width="54" height="8"></rect>
+                <rect id="Rectangle-6" fill="#FFFFFF" x="6" y="23" width="24" height="27"></rect>
+                <rect id="Rectangle-6" fill="#FFFFFF" x="36" y="23" width="24" height="27"></rect>
+                <rect id="Rectangle-6" fill="#FFFFFF" x="5" y="16" width="56" height="2" rx="1"></rect>
+                <g id="Group-2" transform="translate(7.000000, 8.000000)" fill="#FFFFFF">
+                    <path d="M10,4 C8.8954305,4 8,3.1045695 8,2 C8,0.8954305 8.8954305,0 10,0 C11.1045695,0 12,0.8954305 12,2 C12,3.1045695 11.1045695,4 10,4 Z" id="Combined-Shape"></path>
+                    <circle id="Combined-Shape" cx="2" cy="2" r="2"></circle>
+                    <circle id="Combined-Shape" cx="18" cy="2" r="2"></circle>
+                </g>
+            </g>
+            <g id="Group-3" transform="translate(70.000000, 0.000000)">
+                <rect id="Rectangle-6" fill="#272C36" x="0" y="0" width="66" height="90" rx="6"></rect>
+                <rect id="Rectangle-6" fill="#F6F6F6" x="6" y="24" width="54" height="59"></rect>
+                <path d="M21.2,48.2 L21.2,55.4 L24.2,55.4 C25.192005,55.4 26.0399965,55.0480035 26.744,54.344 C27.4480035,53.6399965 27.8,52.792005 27.8,51.8 C27.8,50.807995 27.4480035,49.9600035 26.744,49.256 C26.0399965,48.5519965 25.192005,48.2 24.2,48.2 L21.2,48.2 Z M21.2,59.6 L21.2,63.8 L17,63.8 L17,44 L24.2,44 C26.3600108,44 28.1999924,44.7599924 29.72,46.28 C31.2400076,47.8000076 32,49.6399892 32,51.8 C32,53.9600108 31.2400076,55.7999924 29.72,57.32 C28.1999924,58.8400076 26.3600108,59.6 24.2,59.6 L21.2,59.6 Z M49.88,44 L42.656,63.8 L39.368,63.8 L32.144,44 L36.608,44 L41,56.048 L45.416,44 L49.88,44 Z" id="PV" fill="#232A36"></path>
+                <rect id="Rectangle-6" fill="#F6F6F6" x="5" y="16" width="56" height="2" rx="1"></rect>
+                <g id="Group-2" transform="translate(7.000000, 8.000000)" fill="#F6F6F6">
+                    <path d="M10,4 C8.8954305,4 8,3.1045695 8,2 C8,0.8954305 8.8954305,0 10,0 C11.1045695,0 12,0.8954305 12,2 C12,3.1045695 11.1045695,4 10,4 Z" id="Combined-Shape"></path>
+                    <circle id="Combined-Shape" cx="2" cy="2" r="2"></circle>
+                    <circle id="Combined-Shape" cx="18" cy="2" r="2"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

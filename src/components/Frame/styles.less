@@ -5,9 +5,12 @@
     font-size: 16px;
     height: 56px;
     background: #34c3ff;
-    color: #fff;
     white-space: nowrap;
     overflow: hidden;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
   .rs-sidebar {
     box-shadow: @default-box-shadow;
@@ -23,5 +26,9 @@
   }
   .nav-toggle {
     border-top: 1px solid #eee;
+  }
+
+  .nav-item-active {
+    color: @H500 !important;
   }
 }
