@@ -7,7 +7,7 @@ const Highlight = ({ value, unit }) => (
   </span>
 );
 
-export default function highlightValue(value, unit) {
+export default function highlightValue(value, fixed) {
   if (value === null || typeof value === 'undefined') {
     return '--';
   } else if (value === 0) {
@@ -15,10 +15,10 @@ export default function highlightValue(value, unit) {
   } else if (0 < value && value < 1000) {
     return '< 1k';
   } else if (1000 <= value && value < 1000000) {
-    return <Highlight value={toThousands(value / 1000, unit)} unit="k" />;
+    return <Highlight value={toThousands(value / 1000, fixed)} unit="k" />;
   } else if (1000000 <= value && value < 1000000000) {
-    return <Highlight value={toThousands(value / 1000000, unit)} unit="M" />;
+    return <Highlight value={toThousands(value / 1000000, fixed)} unit="M" />;
   } else if (1000000000 <= value) {
-    return <Highlight value={toThousands(value / 1000000000, unit)} unit="B" />;
+    return <Highlight value={toThousands(value / 1000000000, fixed)} unit="B" />;
   }
 }

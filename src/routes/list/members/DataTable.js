@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { Link } from 'react-router';
-import { getHeight } from 'dom-lib';
 import {
   Input,
   InputGroup,
@@ -13,16 +12,38 @@ import {
   ButtonToolbar,
   Button,
   IconButton,
-  Navbar
+  Navbar,
+  DOMHelper
 } from 'rsuite';
 
 import data from './users';
+import DrawerView from './DrawerView';
 
 const { Column, HeaderCell, Cell } = Table;
+const { getHeight } = DOMHelper;
 
 type Props = {};
+type State = {
+  showDrawer: boolean
+};
 
-class DataList extends React.Component<Props> {
+class DataList extends React.Component<Props, State> {
+  constructor() {
+    super();
+    this.state = {
+      showDrawer: false
+    };
+  }
+  handleShowDrawer = () => {
+    this.setState({
+      showDrawer: true
+    });
+  };
+  handleCloseDrawer = () => {
+    this.setState({
+      showDrawer: false
+    });
+  };
   render() {
     return (
       <div>
@@ -36,8 +57,8 @@ class DataList extends React.Component<Props> {
         >
           <div className="table-toolbar">
             <ButtonToolbar className="inner-left">
-              <Button appearance="primary" placement="left">
-                New Member
+              <Button appearance="primary" placement="left" onClick={this.handleShowDrawer}>
+                New
               </Button>
             </ButtonToolbar>
 
@@ -52,7 +73,7 @@ class DataList extends React.Component<Props> {
           </div>
 
           <Table
-            autoHeight
+            height={getHeight(window) - 216}
             data={data}
             onRowClick={data => {
               console.log(data);
@@ -94,6 +115,7 @@ class DataList extends React.Component<Props> {
             </Column>
           </Table>
         </Panel>
+        <DrawerView show={this.state.showDrawer} onClose={this.handleCloseDrawer} />
       </div>
     );
   }

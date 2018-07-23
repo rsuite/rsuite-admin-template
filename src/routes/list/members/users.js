@@ -4,7 +4,7 @@ export default [
     avartar: 'https://s3.amazonaws.com/uifaces/faces/twitter/justinrob/128.jpg',
     city: 'New Amieshire',
     email: 'Leora13@yahoo.com',
-    firstName: 'Ernest Schuppe SchuppeSchuppeSchuppeSchuppeSchuppeSchuppe Schuppe',
+    firstName: 'Ernest Schuppe',
     lastName: 'Schuppe',
     street: 'Ratke Port',
     zipCode: '17026-3154',
@@ -52,7 +52,6 @@ export default [
     sentence: 'Nam qui perferendis ut rem vitae saepe.',
     stars: 610,
     followers: 170
-
   },
   {
     id: 4,

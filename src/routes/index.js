@@ -3,7 +3,7 @@ export default {
     {
       path: '/',
       indexRoute: {
-        onEnter: (nextState, replace) => replace('/list/members')
+        onEnter: (nextState, replace) => replace('/dashboard')
       },
       childRoutes: [require('./main')]
     }
