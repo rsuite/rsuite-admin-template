@@ -8,6 +8,7 @@ import { Container, Sidebar, Sidenav, Icon, Header, Content, Dropdown, Nav } fro
 import { getHeight, on } from 'dom-lib';
 
 import NavToggle from './NavToggle';
+import HeaderAvatar from '../HeaderAvatar';
 import { pageview } from '../../tracker';
 
 const navs = [
@@ -180,6 +181,7 @@ class Frame extends React.Component<Props, State> {
         </Sidebar>
 
         <Container className={containerClasses}>
+          <HeaderAvatar />
           <Content>{children}</Content>
         </Container>
       </Container>
