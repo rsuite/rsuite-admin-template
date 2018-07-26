@@ -2,10 +2,13 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { Container, Sidebar, Sidenav, Icon, Header, Content, Dropdown, Nav } from 'rsuite';
-import NavToggle from './NavToggle';
 import { getHeight, on } from 'dom-lib';
+
+import NavToggle from './NavToggle';
+import { pageview } from '../../tracker';
 
 const navs = [
   {
@@ -52,6 +55,9 @@ type Props = {
 
 class Frame extends React.Component<Props, State> {
   resizeListenner = null;
+  static contextTypes = {
+    router: PropTypes.object
+  };
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -118,6 +124,11 @@ class Frame extends React.Component<Props, State> {
           {item.text}
         </Nav.Item>
       );
+    });
+  }
+  componentDidMount() {
+    this.context.router.listen(() => {
+      pageview();
     });
   }
   render() {
