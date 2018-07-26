@@ -40,7 +40,7 @@
     "react-hot-loader": "^4.0.0",
     "react-intl": "^2.4.0",
     "react-router": "3.2.0",
-    "rsuite": "^3.2.1",
+    "rsuite": "^3.2.2",
     "rsuite-utils": "^1.0.0"
   },
   "peerDependencies": {
