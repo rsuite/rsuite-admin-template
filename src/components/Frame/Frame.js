@@ -153,7 +153,16 @@ class Frame extends React.Component<Props, State> {
           </Sidenav.Header>
           <Sidenav expanded={expand} defaultOpenKeys={['3']} activeKey={[]} appearance="subtle">
             <Sidenav.Body style={navBodyStyle}>
-              <Nav>{this.renderNavs()}</Nav>
+              <Nav>
+                {this.renderNavs()}
+                <Nav.Item
+                  href="https://github.com/rsuite/rsuite-management-system"
+                  icon={<Icon icon="github" />}
+                  target="_blank"
+                >
+                  Github
+                </Nav.Item>
+              </Nav>
             </Sidenav.Body>
           </Sidenav>
           <NavToggle expand={expand} onChange={this.handleToggle} />
