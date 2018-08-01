@@ -31,13 +31,11 @@ const navs = [
     children: [
       {
         key: '3-1',
-        icon: <Icon icon="group" />,
         text: '404',
         link: '/error/404'
       },
       {
         key: '3-1',
-        icon: <Icon icon="group" />,
         text: '500',
         link: '/error/500'
       }

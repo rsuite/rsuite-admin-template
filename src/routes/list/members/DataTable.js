@@ -13,7 +13,8 @@ import {
   Button,
   IconButton,
   Navbar,
-  DOMHelper
+  DOMHelper,
+  Notification
 } from 'rsuite';
 
 import data from './users';
@@ -47,14 +48,7 @@ class DataList extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <Panel
-          header={
-            <h3>
-              <Icon icon="group" /> {'  '}
-              Members
-            </h3>
-          }
-        >
+        <Panel header={<h3>Members</h3>}>
           <div className="table-toolbar">
             <ButtonToolbar className="inner-left">
               <Button appearance="primary" placement="left" onClick={this.handleShowDrawer}>
