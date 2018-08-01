@@ -12,7 +12,8 @@
     "build-webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "build": "npm run clear-dist && npm run build-webpack",
     "publish-github": "node gh-pages.js",
-    "test": "karma start"
+    "test": "karma start",
+    "flow": "flow"
   },
   "keywords": [
     "react",
@@ -32,10 +33,13 @@
     "url": "git@github.com:rsuite/rsuite-management-system.git"
   },
   "dependencies": {
+    "chartist": "^0.11.0",
     "classnames": ">=2.0.0",
     "moment": "^2.20.1",
+    "npm": "^6.2.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-chartist": "^0.13.1",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.0",
     "react-intl": "^2.4.0",
@@ -75,6 +79,7 @@
     "eslint-plugin-react": "^5.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
+    "flow-bin": "^0.77.0",
     "fs-promise": "^0.5.0",
     "gh-pages": "^1.2.0",
     "glob": "^7.0.3",
