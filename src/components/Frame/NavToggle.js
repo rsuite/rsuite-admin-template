@@ -2,11 +2,17 @@
 import React from 'react';
 import { Navbar, Nav, Dropdown, Icon } from 'rsuite';
 
-const iconStyles = {
-  width: 56,
-  height: 56,
-  lineHeight: '56px',
-  textAlign: 'center'
+const styles = {
+  icon: {
+    width: 56,
+    height: 56,
+    lineHeight: '56px',
+    textAlign: 'center'
+  },
+  navItem: {
+    width: 56,
+    textAlign: 'center'
+  }
 };
 
 type Props = {
@@ -20,10 +26,10 @@ const NavToggle = ({ expand, onChange }: Props) => {
       <Navbar.Body>
         <Nav>
           <Dropdown
-            placement="topLeft"
+            placement={expand ? 'topLeft' : 'rightBottom'}
             trigger="click"
             renderTitle={children => {
-              return <Icon style={iconStyles} icon="cog" />;
+              return <Icon style={styles.icon} icon="cog" />;
             }}
           >
             <Dropdown.Item>Help</Dropdown.Item>
@@ -33,7 +39,7 @@ const NavToggle = ({ expand, onChange }: Props) => {
         </Nav>
 
         <Nav pullRight>
-          <Nav.Item onClick={onChange} style={{ width: 56, textAlign: 'center' }}>
+          <Nav.Item onClick={onChange} style={styles.navItem}>
             <Icon icon={expand ? 'angle-left' : 'angle-right'} />
           </Nav.Item>
         </Nav>
