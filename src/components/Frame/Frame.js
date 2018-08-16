@@ -4,13 +4,23 @@ import * as React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import { Container, Sidebar, Sidenav, Icon, Header, Content, Dropdown, Nav } from 'rsuite';
-import { getHeight, on } from 'dom-lib';
+import {
+  Container,
+  Sidebar,
+  Sidenav,
+  Icon,
+  Header,
+  Content,
+  Dropdown,
+  Nav,
+  DOMHelper
+} from 'rsuite';
 
 import NavToggle from './NavToggle';
 import HeaderAvatar from '../HeaderAvatar';
 import { pageview } from '../../tracker';
 
+const { getHeight, on } = DOMHelper;
 const navs = [
   {
     key: '1',
