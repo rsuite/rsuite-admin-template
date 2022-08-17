@@ -6,6 +6,7 @@ import NavToggle from './NavToggle';
 import Header from '../Header';
 import GithubIcon from '@rsuite/icons/legacy/Github';
 import AdvancedAnalyticsIcon from '@rsuite/icons/AdvancedAnalytics';
+import CubesIcon from '@rsuite/icons/legacy/Cubes';
 import NavLink from '../NavLink';
 
 const { getHeight, on } = DOMHelper;
@@ -69,7 +70,7 @@ const Frame = (props: FrameProps) => {
             </Link>
           </div>
         </Sidenav.Header>
-        <Sidenav expanded={expand} defaultOpenKeys={['3']} appearance="subtle">
+        <Sidenav expanded={expand} appearance="subtle" defaultOpenKeys={['2', '3']}>
           <Sidenav.Body style={navBodyStyle}>
             <Nav>
               {navs.map(item => {
@@ -85,6 +86,14 @@ const Frame = (props: FrameProps) => {
                 }
                 return <NavItem key={rest.eventKey} {...rest} />;
               })}
+              <Nav.Item
+                href="https://rsuitejs.com/components/overview/"
+                icon={<CubesIcon />}
+                target="_blank"
+              >
+                Components
+              </Nav.Item>
+
               <Nav.Item
                 href="https://github.com/rsuite/rsuite-admin-template"
                 icon={<GithubIcon />}

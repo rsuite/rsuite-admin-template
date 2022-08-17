@@ -64,7 +64,7 @@ const DataTable = () => {
           </div>
         </div>
 
-        <Table height={Math.max(getHeight(window) - 216, 400)} data={data}>
+        <Table height={Math.max(getHeight(window) - 200, 400)} data={data}>
           <Column width={70} align="center" fixed>
             <HeaderCell>Id</HeaderCell>
             <Cell dataKey="id" />

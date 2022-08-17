@@ -4,35 +4,44 @@
     padding: 18px;
     font-size: 16px;
     height: 56px;
-    background: #34c3ff;
     white-space: nowrap;
     overflow: hidden;
+    font-weight: bold;
+    text-transform: uppercase;
+
     a {
-      color: #fff;
       text-decoration: none;
     }
   }
   .rs-sidebar {
-    box-shadow: @default-box-shadow;
+    background: #fff;
   }
   .rs-sidenav {
     flex: 1 1 auto;
     transition: none !important;
-    border-top: 1px solid @B200;
+    border-top: 1px solid @B100;
     width: 100%;
   }
 
   .rs-content {
-    padding: 20px;
+    padding: 0 10px;
+
+    .rs-panel-title {
+      font-size: 18px;
+    }
   }
   .nav-toggle {
-    border-top: 1px solid #eee;
+    border-top: 1px solid @B100;
   }
 
   .rs-sidenav-item,
   .rs-dropdown-item {
     &.active {
       color: @H500 !important;
+    }
+    &-icon {
+      height: 1.3em !important;
+      width: 1.3em !important;
     }
   }
 }

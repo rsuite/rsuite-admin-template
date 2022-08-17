@@ -1,7 +1,17 @@
 import React, { useRef } from 'react';
-import { Dropdown, Popover, Whisper, WhisperInstance, Stack, Badge, Avatar } from 'rsuite';
+import {
+  Dropdown,
+  Popover,
+  Whisper,
+  WhisperInstance,
+  Stack,
+  Badge,
+  Avatar,
+  IconButton
+} from 'rsuite';
 import NoticeIcon from '@rsuite/icons/Notice';
 import HelpOutlineIcon from '@rsuite/icons/HelpOutline';
+import GithubIcon from '@rsuite/icons/legacy/Github';
 
 const renderAdminSpeaker = ({ onClose, left, top, className }: any, ref) => {
   const handleSelect = eventKey => {
@@ -39,21 +49,24 @@ const Header = () => {
   const trigger = useRef<WhisperInstance>(null);
 
   return (
-    <Stack className="header" spacing={20}>
-      <Badge content={5}>
-        <NoticeIcon style={{ fontSize: 20 }} />
-      </Badge>
+    <Stack className="header" spacing={8}>
+      <IconButton icon={<GithubIcon style={{ fontSize: 20 }} />} />
+      <IconButton
+        icon={
+          <Badge content={5}>
+            <NoticeIcon style={{ fontSize: 20 }} />
+          </Badge>
+        }
+      />
 
       <Whisper placement="bottomEnd" trigger="click" ref={trigger} speaker={renderAdminSpeaker}>
-        <Stack spacing={6}>
-          <Avatar
-            size="sm"
-            circle
-            src="https://avatars.githubusercontent.com/u/1203827"
-            alt="@simonguo"
-          />
-          <span>Admin</span>
-        </Stack>
+        <Avatar
+          size="sm"
+          circle
+          src="https://avatars.githubusercontent.com/u/1203827"
+          alt="@simonguo"
+          style={{ marginLeft: 8 }}
+        />
       </Whisper>
     </Stack>
   );

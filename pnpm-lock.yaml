@@ -48,6 +48,7 @@ specifiers:
   react: ^18.2.0
   react-chartist: ^0.14.4
   react-dom: ^18.2.0
+  react-icons: ^4.4.0
   react-intl: ^6.0.5
   react-router: 6.3.0
   react-router-dom: ^6.3.0
@@ -68,6 +69,7 @@ dependencies:
   react: 18.2.0
   react-chartist: 0.14.4_uq4xdmbranb5dmrhsn4hftzjqe
   react-dom: 18.2.0_react@18.2.0
+  react-icons: 4.4.0_react@18.2.0
   react-intl: 6.0.5_qtbnez4q7bzoc4eqybg3efzzxe
   react-router: 6.3.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
@@ -6924,6 +6926,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-icons/4.4.0_react@18.2.0:
+    resolution: {integrity: sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-intl/6.0.5_qtbnez4q7bzoc4eqybg3efzzxe:
