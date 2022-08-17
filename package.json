@@ -8,9 +8,9 @@
   },
   "scripts": {
     "dev": "webpack serve --mode development --port 3100 --host 0.0.0.0 --progress ",
-    "clear-dist": "rm -rf dist",
-    "build-webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
-    "build": "npm run clear-dist && npm run build-webpack",
+    "clear": "rm -rf assets",
+    "build:webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./assets/ ",
+    "build": "npm run clear && npm run build:webpack",
     "publish:gh-pages": "node gh-pages.js"
   },
   "keywords": [
