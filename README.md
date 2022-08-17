@@ -1,27 +1,34 @@
-# RSUITE ANALYTICS 
+# Admin Dashboard Template
 
-这是一个 React Suite 示例项目
+Ease developers’ life with the React Suite 5. TypeScript will help with optimizing. Quick start & easily extensible code.
 
-![demo](./readme.jpg)
+![preview](./preview-1.png)
 
+![preview](./preview-2.png)
 
-## 开发
+## Development
+
+Fork this repo to your namespace and clone to your local machine.
+
+```
+git clone git@github.com:<YOUR NAME>/rsuite-admin-template.git
+$ cd rsuite-admin-template
+```
+
+Install dependencies
+
+```
+npm install
+```
+
+Now you can start the development server by running npm run dev
+
+It's serving at http://127.0.0.1:3100/ by default.
 
 ```
 npm run dev
 ```
 
+## License
 
-## 测试
-
-```
-npm run test
-```
-
-
-## 打包发布
-
-
-```
-npm run build
-```
+MIT © [simonguo](https://github.com/simonguo)
