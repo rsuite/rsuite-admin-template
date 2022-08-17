@@ -11,8 +11,7 @@
     "clear-dist": "rm -rf dist",
     "build-webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "build": "npm run clear-dist && npm run build-webpack",
-    "publish-github": "node gh-pages.js",
-    "flow": "flow"
+    "publish:gh-pages": "node gh-pages.js"
   },
   "keywords": [
     "react",
