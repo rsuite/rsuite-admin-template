@@ -39,7 +39,7 @@ const VirtualizedTable = () => {
         <Cell dataKey="city" />
       </Column>
 
-      <Column width={200}>
+      <Column minWidth={200} flexGrow={1}>
         <HeaderCell>Email</HeaderCell>
         <Cell dataKey="email" />
       </Column>

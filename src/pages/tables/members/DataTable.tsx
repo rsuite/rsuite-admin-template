@@ -3,11 +3,12 @@ import {
   Input,
   InputGroup,
   Table,
-  ButtonToolbar,
   Button,
   DOMHelper,
   Progress,
-  Checkbox
+  Checkbox,
+  Stack,
+  SelectPicker
 } from 'rsuite';
 import SearchIcon from '@rsuite/icons/Search';
 import MoreIcon from '@rsuite/icons/legacy/More';
@@ -20,9 +21,23 @@ const data = mockUsers(20);
 const { Column, HeaderCell, Cell } = Table;
 const { getHeight } = DOMHelper;
 
+const ratingList = Array.from({ length: 5 }).map((_, index) => {
+  return {
+    value: index + 1,
+    label: Array.from({ length: index + 1 })
+      .map(() => '⭐️')
+      .join('')
+  };
+});
+
 const DataTable = () => {
   const [showDrawer, setShowDrawer] = useState(false);
   const [checkedKeys, setCheckedKeys] = useState<number[]>([]);
+  const [sortColumn, setSortColumn] = useState();
+  const [sortType, setSortType] = useState();
+  const [searchKeyword, setSearchKeyword] = useState('');
+  const [rating, setRating] = useState<number | null>(null);
+
   let checked = false;
   let indeterminate = false;
 
@@ -43,26 +58,77 @@ const DataTable = () => {
     setCheckedKeys(keys);
   };
 
+  const handleSortColumn = (sortColumn, sortType) => {
+    setSortColumn(sortColumn);
+    setSortType(sortType);
+  };
+
+  const filteredData = () => {
+    const filtered = data.filter(item => {
+      if (!item.name.includes(searchKeyword)) {
+        return false;
+      }
+
+      if (rating && item.rating !== rating) {
+        return false;
+      }
+
+      return true;
+    });
+
+    if (sortColumn && sortType) {
+      return filtered.sort((a, b) => {
+        let x: any = a[sortColumn];
+        let y: any = b[sortColumn];
+
+        if (typeof x === 'string') {
+          x = x.charCodeAt(0);
+        }
+        if (typeof y === 'string') {
+          y = y.charCodeAt(0);
+        }
+
+        if (sortType === 'asc') {
+          return x - y;
+        } else {
+          return y - x;
+        }
+      });
+    }
+    return filtered;
+  };
+
   return (
     <>
-      <div className="table-toolbar">
-        <ButtonToolbar className="inner-left">
-          <Button appearance="primary" onClick={() => setShowDrawer(true)}>
-            Add Member
-          </Button>
-        </ButtonToolbar>
+      <Stack className="table-toolbar" justifyContent="space-between">
+        <Button appearance="primary" onClick={() => setShowDrawer(true)}>
+          Add Member
+        </Button>
 
-        <div className="inner-right">
+        <Stack spacing={6}>
+          <SelectPicker
+            label="Rating"
+            data={ratingList}
+            searchable={false}
+            value={rating}
+            onChange={setRating}
+          />
           <InputGroup inside>
-            <Input placeholder="Search" />
+            <Input placeholder="Search" value={searchKeyword} onChange={setSearchKeyword} />
             <InputGroup.Addon>
               <SearchIcon />
             </InputGroup.Addon>
           </InputGroup>
-        </div>
-      </div>
+        </Stack>
+      </Stack>
 
-      <Table height={Math.max(getHeight(window) - 200, 400)} data={data}>
+      <Table
+        height={Math.max(getHeight(window) - 200, 400)}
+        data={filteredData()}
+        sortColumn={sortColumn}
+        sortType={sortType}
+        onSortColumn={handleSortColumn}
+      >
         <Column width={70} align="center" fixed>
           <HeaderCell>Id</HeaderCell>
           <Cell dataKey="id" />
@@ -86,30 +152,30 @@ const DataTable = () => {
           <ImageCell dataKey="avatar" />
         </Column>
 
-        <Column minWidth={160} flexGrow={1}>
+        <Column minWidth={160} flexGrow={1} sortable>
           <HeaderCell>Name</HeaderCell>
           <NameCell dataKey="name" />
         </Column>
 
-        <Column width={230}>
+        <Column width={230} sortable>
           <HeaderCell>Skill Proficiency</HeaderCell>
-          <Cell style={{ padding: '10px 0' }}>
+          <Cell style={{ padding: '10px 0' }} dataKey="progress">
             {rowData => <Progress percent={rowData.progress} showInfo={false} />}
           </Cell>
         </Column>
 
-        <Column width={100}>
+        <Column width={100} sortable>
           <HeaderCell>Rating</HeaderCell>
-          <Cell>
+          <Cell dataKey="rating">
             {rowData =>
               Array.from({ length: rowData.rating }).map((_, i) => <span key={i}>⭐️</span>)
             }
           </Cell>
         </Column>
 
-        <Column width={100}>
+        <Column width={100} sortable>
           <HeaderCell>Income</HeaderCell>
-          <Cell>{rowData => `$${rowData.amount}`}</Cell>
+          <Cell dataKey="amount">{rowData => `$${rowData.amount}`}</Cell>
         </Column>
 
         <Column width={300}>

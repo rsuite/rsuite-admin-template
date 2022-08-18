@@ -54,7 +54,7 @@ const barChartData = [
 
 const Dashboard = () => {
   return (
-    <Panel className="dashboard" header={<h3>Dashboard</h3>}>
+    <>
       <Row gutter={30} className="dashboard-header">
         <Col xs={8}>
           <Panel className="trend-box">
@@ -178,7 +178,7 @@ const Dashboard = () => {
           />
         </Col>
       </Row>
-    </Panel>
+    </>
   );
 };
 
