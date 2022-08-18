@@ -7,7 +7,9 @@ import {
   Stack,
   Badge,
   Avatar,
-  IconButton
+  IconButton,
+  List,
+  Button
 } from 'rsuite';
 import NoticeIcon from '@rsuite/icons/Notice';
 import HelpOutlineIcon from '@rsuite/icons/HelpOutline';
@@ -46,6 +48,32 @@ const renderAdminSpeaker = ({ onClose, left, top, className }: any, ref) => {
   );
 };
 
+const renderNoticeSpeaker = ({ onClose, left, top, className }: any, ref) => {
+  const notifications = [
+    'The charts of the dashboard have been fully upgraded and are more visually pleasing.',
+    'The function of virtualizing large lists has been added, and the style of the list can be customized as required.',
+    'Upgraded React 18 and Webpack 5.',
+    'Upgraded React Suite 5 to support TypeScript, which is more concise and efficient.'
+  ];
+
+  return (
+    <Popover ref={ref} className={className} style={{ left, top, width: 300 }} title="Last updates">
+      <List>
+        {notifications.map((item, index) => (
+          <List.Item key={index}>
+            <Stack spacing={4}>
+              <Badge /> <span>{item}</span>
+            </Stack>
+          </List.Item>
+        ))}
+      </List>
+      <div style={{ textAlign: 'center', marginTop: 20 }}>
+        <Button onClick={onClose}>More notifications</Button>
+      </div>
+    </Popover>
+  );
+};
+
 const Header = () => {
   const trigger = useRef<WhisperInstance>(null);
 
@@ -61,13 +89,16 @@ const Header = () => {
         href="https://github.com/rsuite/rsuite-admin-template"
         target="_blank"
       />
-      <IconButton
-        icon={
-          <Badge content={5}>
-            <NoticeIcon style={{ fontSize: 20 }} />
-          </Badge>
-        }
-      />
+
+      <Whisper placement="bottomEnd" trigger="click" ref={trigger} speaker={renderNoticeSpeaker}>
+        <IconButton
+          icon={
+            <Badge content={5}>
+              <NoticeIcon style={{ fontSize: 20 }} />
+            </Badge>
+          }
+        />
+      </Whisper>
 
       <Whisper placement="bottomEnd" trigger="click" ref={trigger} speaker={renderAdminSpeaker}>
         <Avatar
