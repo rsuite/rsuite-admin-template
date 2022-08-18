@@ -21,10 +21,10 @@ specifiers:
   '@types/react-dom': ^17.0.0
   '@typescript-eslint/eslint-plugin': ^5.30.5
   '@typescript-eslint/parser': ^5.30.5
+  apexcharts: ^3.35.4
   autoprefixer: ^10.4.7
   babel-loader: ^8.1.0
   babel-plugin-module-resolver: ^4.1.0
-  chartist: ^0.10.1
   classnames: ^2.3.1
   conventional-changelog-cli: ^2.2.2
   css-loader: ^6.7.1
@@ -46,7 +46,7 @@ specifiers:
   prettier: ^2.4.1
   prop-types: ^15.6.0
   react: ^18.2.0
-  react-chartist: ^0.14.4
+  react-apexcharts: ^1.4.0
   react-dom: ^18.2.0
   react-icons: ^4.4.0
   react-intl: ^6.0.5
@@ -63,11 +63,11 @@ dependencies:
   '@babel/runtime': 7.18.9
   '@faker-js/faker': 7.4.0
   '@rsuite/icons': 1.0.2_biqbaboplfbrettd7655fr4n2y
-  chartist: 0.10.1
+  apexcharts: 3.35.4
   classnames: 2.3.1
   prop-types: 15.8.1
   react: 18.2.0
-  react-chartist: 0.14.4_uq4xdmbranb5dmrhsn4hftzjqe
+  react-apexcharts: 1.4.0_duwsp7oksndcqyymyvndtwsgoa
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.4.0_react@18.2.0
   react-intl: 6.0.5_qtbnez4q7bzoc4eqybg3efzzxe
@@ -2420,6 +2420,17 @@ packages:
     dev: true
     optional: true
 
+  /apexcharts/3.35.4:
+    resolution: {integrity: sha512-dsXjETHF2OmKtxNv66wBeFGU2qtZQnr6kp/vcNY05GWs4vcBepg54qNgOJ2Gp/gXskiGw/frrmIKGi8lJ/UDnQ==}
+    dependencies:
+      svg.draggable.js: 2.2.2
+      svg.easing.js: 2.0.0
+      svg.filter.js: 2.0.2
+      svg.pathmorphing.js: 0.1.3
+      svg.resize.js: 1.4.3
+      svg.select.js: 3.0.1
+    dev: false
+
   /argparse/1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
     dependencies:
@@ -2852,11 +2863,6 @@ packages:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
     dev: true
-
-  /chartist/0.10.1:
-    resolution: {integrity: sha512-8Yd4F6tXvAaM5CIPmFYknC76KEgaU7iiY7Amo5IaaCRmTT/5YXjc/FuNXgqhPttOXHoGSjl0i3gkOE1mv15/wA==}
-    engines: {node: '>=4.6.0'}
-    dev: false
 
   /chokidar/2.1.8_supports-color@6.1.0:
     resolution: {integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==}
@@ -6907,13 +6913,13 @@ packages:
       unpipe: 1.0.0
     dev: true
 
-  /react-chartist/0.14.4_uq4xdmbranb5dmrhsn4hftzjqe:
-    resolution: {integrity: sha512-1riwO5CjT5IdrilCM788waUYpIdl8Y4vsIc6Y5bbR3PIX46NYYtcq5bcaBEkIZfKEThuoJDEV6FU1rDmfbogsg==}
+  /react-apexcharts/1.4.0_duwsp7oksndcqyymyvndtwsgoa:
+    resolution: {integrity: sha512-DrcMV4aAMrUG+n6412yzyATWEyCDWlpPBBhVbpzBC4PDeuYU6iF84SmExbck+jx5MUm4U5PM3/T307Mc3kzc9Q==}
     peerDependencies:
-      chartist: ^0.10.1
-      react: ^0.14.9 || ^15.0.0 || ^16.0.0 || ^17.0.0
+      apexcharts: ^3.18.0
+      react: '>=0.13'
     dependencies:
-      chartist: 0.10.1
+      apexcharts: 3.35.4
       prop-types: 15.8.1
       react: 18.2.0
     dev: false
@@ -7964,6 +7970,60 @@ packages:
   /svg-parser/2.0.4:
     resolution: {integrity: sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==}
     dev: true
+
+  /svg.draggable.js/2.2.2:
+    resolution: {integrity: sha512-JzNHBc2fLQMzYCZ90KZHN2ohXL0BQJGQimK1kGk6AvSeibuKcIdDX9Kr0dT9+UJ5O8nYA0RB839Lhvk4CY4MZw==}
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      svg.js: 2.7.1
+    dev: false
+
+  /svg.easing.js/2.0.0:
+    resolution: {integrity: sha512-//ctPdJMGy22YoYGV+3HEfHbm6/69LJUTAqI2/5qBvaNHZ9uUFVC82B0Pl299HzgH13rKrBgi4+XyXXyVWWthA==}
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      svg.js: 2.7.1
+    dev: false
+
+  /svg.filter.js/2.0.2:
+    resolution: {integrity: sha512-xkGBwU+dKBzqg5PtilaTb0EYPqPfJ9Q6saVldX+5vCRy31P6TlRCP3U9NxH3HEufkKkpNgdTLBJnmhDHeTqAkw==}
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      svg.js: 2.7.1
+    dev: false
+
+  /svg.js/2.7.1:
+    resolution: {integrity: sha512-ycbxpizEQktk3FYvn/8BH+6/EuWXg7ZpQREJvgacqn46gIddG24tNNe4Son6omdXCnSOaApnpZw6MPCBA1dODA==}
+    dev: false
+
+  /svg.pathmorphing.js/0.1.3:
+    resolution: {integrity: sha512-49HWI9X4XQR/JG1qXkSDV8xViuTLIWm/B/7YuQELV5KMOPtXjiwH4XPJvr/ghEDibmLQ9Oc22dpWpG0vUDDNww==}
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      svg.js: 2.7.1
+    dev: false
+
+  /svg.resize.js/1.4.3:
+    resolution: {integrity: sha512-9k5sXJuPKp+mVzXNvxz7U0uC9oVMQrrf7cFsETznzUDDm0x8+77dtZkWdMfRlmbkEEYvUn9btKuZ3n41oNA+uw==}
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      svg.js: 2.7.1
+      svg.select.js: 2.1.2
+    dev: false
+
+  /svg.select.js/2.1.2:
+    resolution: {integrity: sha512-tH6ABEyJsAOVAhwcCjF8mw4crjXSI1aa7j2VQR8ZuJ37H2MBUbyeqYr5nEO7sSN3cy9AR9DUwNg0t/962HlDbQ==}
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      svg.js: 2.7.1
+    dev: false
+
+  /svg.select.js/3.0.1:
+    resolution: {integrity: sha512-h5IS/hKkuVCbKSieR9uQCj9w+zLHoPh+ce19bBYyqF53g6mnPB8sAtIbe1s9dh2S2fCmYX2xel1Ln3PJBbK4kw==}
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      svg.js: 2.7.1
+    dev: false
 
   /svgo/2.8.0:
     resolution: {integrity: sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==}

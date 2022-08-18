@@ -4,7 +4,6 @@ import { Container, Sidebar, Sidenav, Content, Nav, DOMHelper } from 'rsuite';
 import { Link, Outlet } from 'react-router-dom';
 import NavToggle from './NavToggle';
 import Header from '../Header';
-import GithubIcon from '@rsuite/icons/legacy/Github';
 import AdvancedAnalyticsIcon from '@rsuite/icons/AdvancedAnalytics';
 import CubesIcon from '@rsuite/icons/legacy/Cubes';
 import NavLink from '../NavLink';
@@ -92,14 +91,6 @@ const Frame = (props: FrameProps) => {
                 target="_blank"
               >
                 Components
-              </Nav.Item>
-
-              <Nav.Item
-                href="https://github.com/rsuite/rsuite-admin-template"
-                icon={<GithubIcon />}
-                target="_blank"
-              >
-                Github
               </Nav.Item>
             </Nav>
           </Sidenav.Body>
