@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { Container, Sidebar, Sidenav, Content, Nav, DOMHelper } from 'rsuite';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import NavToggle from './NavToggle';
 import Header from '../Header';
-import AdvancedAnalyticsIcon from '@rsuite/icons/AdvancedAnalytics';
 import CubesIcon from '@rsuite/icons/legacy/Cubes';
 import NavLink from '../NavLink';
+import Brand from '../Brand';
 
 const { getHeight, on } = DOMHelper;
 
@@ -62,12 +62,7 @@ const Frame = (props: FrameProps) => {
         collapsible
       >
         <Sidenav.Header>
-          <div className="header-hrand">
-            <Link to="/">
-              <AdvancedAnalyticsIcon style={{ fontSize: 22 }} />
-              <span style={{ marginLeft: 16 }}>Admin Template</span>
-            </Link>
-          </div>
+          <Brand />
         </Sidenav.Header>
         <Sidenav expanded={expand} appearance="subtle" defaultOpenKeys={['2', '3']}>
           <Sidenav.Body style={navBodyStyle}>

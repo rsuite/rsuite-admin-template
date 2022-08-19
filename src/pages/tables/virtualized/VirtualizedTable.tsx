@@ -1,14 +1,16 @@
 import React from 'react';
-import { Table, DOMHelper } from 'rsuite';
+import { DOMHelper } from 'rsuite';
 import { mockUsers } from '@/data/mock';
 
+import { Table, Column, HeaderCell, Cell } from 'rsuite-table';
+
 const { getHeight } = DOMHelper;
-const { Column, HeaderCell, Cell } = Table;
+
 const data = mockUsers(1000);
 
 const VirtualizedTable = () => {
   return (
-    <Table virtualized height={Math.max(getHeight(window) - 120, 400)} data={data}>
+    <Table virtualized height={Math.max(getHeight(window) - 120, 400)} data={data} translate3d={false}>
       <Column width={70} align="center" fixed>
         <HeaderCell>Id</HeaderCell>
         <Cell dataKey="id" />

@@ -4,20 +4,22 @@ import { IntlProvider } from 'react-intl';
 import { CustomProvider } from 'rsuite';
 import enGB from 'rsuite/locales/en_GB';
 import { Icon } from '@rsuite/icons';
-import { VscDashboard, VscTable, VscWorkspaceTrusted } from 'react-icons/vsc';
+import { VscTable } from 'react-icons/vsc';
+import { MdFingerprint, MdDashboard } from 'react-icons/md';
 import locales from './locales';
 import Frame from './components/Frame';
 import DashboardPage from './pages/dashboard';
 import Error404Page from './pages/authentication/404';
 import Error500Page from './pages/authentication/500';
 import SignInPage from './pages/authentication/sign-in';
+import SignUpPage from './pages/authentication/sign-up';
 import MembersPage from './pages/tables/members';
 import VirtualizedTablePage from './pages/tables/virtualized';
 
 const appNavs = [
   {
     eventKey: 'dashboard',
-    icon: <Icon as={VscDashboard} />,
+    icon: <Icon as={MdDashboard} />,
     title: 'Dashboard',
     to: '/dashboard'
   },
@@ -42,13 +44,20 @@ const appNavs = [
   {
     eventKey: 'authentication',
     title: 'Authentication',
-    icon: <Icon as={VscWorkspaceTrusted} />,
+    icon: <Icon as={MdFingerprint} />,
     children: [
       {
         eventKey: 'sign-in',
         title: 'Sign In',
         to: '/sign-in'
       },
+
+      {
+        eventKey: 'sign-up',
+        title: 'Sign Up',
+        to: '/sign-up'
+      },
+
       {
         eventKey: 'error400',
         title: 'Error 404',
@@ -76,6 +85,7 @@ const App = () => {
             <Route path="error-404" element={<Error404Page />} />
             <Route path="error-500" element={<Error500Page />} />
             <Route path="sign-in" element={<SignInPage />} />
+            <Route path="sign-up" element={<SignUpPage />} />
           </Route>
           <Route path="*" element={<Error404Page />} />
         </Routes>

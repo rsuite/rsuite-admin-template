@@ -53,6 +53,7 @@ specifiers:
   react-router: 6.3.0
   react-router-dom: ^6.3.0
   rsuite: 5.17.0-beta.1
+  rsuite-table: ^5.6.1
   typescript: ^4.6.4
   url-loader: ^4.1.1
   webpack: ^5.73.0
@@ -74,6 +75,7 @@ dependencies:
   react-router: 6.3.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
   rsuite: 5.17.0-beta.1_biqbaboplfbrettd7655fr4n2y
+  rsuite-table: 5.6.1_v2m5e27vhdewzwhryxwfaorcca
 
 devDependencies:
   '@babel/cli': 7.18.10_@babel+core@7.18.10
