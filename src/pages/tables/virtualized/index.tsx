@@ -11,7 +11,7 @@ const Page = () => {
           <h3 className="title">Virtualized Table</h3>
           <Breadcrumb>
             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-            <Breadcrumb.Item href="/">Tables</Breadcrumb.Item>
+            <Breadcrumb.Item>Tables</Breadcrumb.Item>
             <Breadcrumb.Item active>Virtualized Table</Breadcrumb.Item>
           </Breadcrumb>
         </>

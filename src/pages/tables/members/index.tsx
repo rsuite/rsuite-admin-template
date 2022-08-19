@@ -10,7 +10,7 @@ const Page = () => {
           <h3 className="title">Members</h3>
           <Breadcrumb>
             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-            <Breadcrumb.Item href="/">Tables</Breadcrumb.Item>
+            <Breadcrumb.Item>Tables</Breadcrumb.Item>
             <Breadcrumb.Item active>Members</Breadcrumb.Item>
           </Breadcrumb>
         </>

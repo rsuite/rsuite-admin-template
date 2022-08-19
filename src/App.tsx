@@ -4,52 +4,58 @@ import { IntlProvider } from 'react-intl';
 import { CustomProvider } from 'rsuite';
 import enGB from 'rsuite/locales/en_GB';
 import { Icon } from '@rsuite/icons';
-import { VscDashboard, VscTable, VscError } from 'react-icons/vsc';
+import { VscDashboard, VscTable, VscWorkspaceTrusted } from 'react-icons/vsc';
 import locales from './locales';
 import Frame from './components/Frame';
-import Dashboard from './pages/dashboard';
-import Error404 from './pages/error/404';
-import Error500 from './pages/error/500';
-import Members from './pages/tables/members';
-import VirtualizedTable from './pages/tables/virtualized';
+import DashboardPage from './pages/dashboard';
+import Error404Page from './pages/authentication/404';
+import Error500Page from './pages/authentication/500';
+import SignInPage from './pages/authentication/sign-in';
+import MembersPage from './pages/tables/members';
+import VirtualizedTablePage from './pages/tables/virtualized';
 
 const appNavs = [
   {
-    eventKey: '1',
+    eventKey: 'dashboard',
     icon: <Icon as={VscDashboard} />,
     title: 'Dashboard',
     to: '/dashboard'
   },
   {
-    eventKey: '2',
+    eventKey: 'tables',
     icon: <Icon as={VscTable} />,
     title: 'Tables',
     to: '/table-members',
     children: [
       {
-        eventKey: '3-1',
+        eventKey: 'members',
         title: 'Members',
         to: '/table-members'
       },
       {
-        eventKey: '3-2',
+        eventKey: 'virtualized',
         title: 'Virtualized Table',
         to: '/table-virtualized'
       }
     ]
   },
   {
-    eventKey: '3',
-    title: 'Error pages',
-    icon: <Icon as={VscError} />,
+    eventKey: 'authentication',
+    title: 'Authentication',
+    icon: <Icon as={VscWorkspaceTrusted} />,
     children: [
       {
-        eventKey: '3-1',
+        eventKey: 'sign-in',
+        title: 'Sign In',
+        to: '/sign-in'
+      },
+      {
+        eventKey: 'error400',
         title: 'Error 404',
         to: '/error-404'
       },
       {
-        eventKey: '3-2',
+        eventKey: 'error500',
         title: 'Error 500',
         to: '/error-500'
       }
@@ -63,14 +69,15 @@ const App = () => {
       <CustomProvider locale={enGB}>
         <Routes>
           <Route path="/" element={<Frame navs={appNavs} />}>
-            <Route index element={<Dashboard />} />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="table-members" element={<Members />} />
-            <Route path="table-virtualized" element={<VirtualizedTable />} />
-            <Route path="error-404" element={<Error404 />} />
-            <Route path="error-500" element={<Error500 />} />
+            <Route index element={<DashboardPage />} />
+            <Route path="dashboard" element={<DashboardPage />} />
+            <Route path="table-members" element={<MembersPage />} />
+            <Route path="table-virtualized" element={<VirtualizedTablePage />} />
+            <Route path="error-404" element={<Error404Page />} />
+            <Route path="error-500" element={<Error500Page />} />
+            <Route path="sign-in" element={<SignInPage />} />
           </Route>
-          <Route path="*" element={<Error404 />} />
+          <Route path="*" element={<Error404Page />} />
         </Routes>
       </CustomProvider>
     </IntlProvider>
