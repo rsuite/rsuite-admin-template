@@ -45,7 +45,7 @@
     "react-router": "6.3.0",
     "react-router-dom": "^6.3.0",
     "rsuite": "5.17.0-beta.1",
-    "rsuite-table": "^5.6.1"
+    "rsuite-table": "^5.7.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",

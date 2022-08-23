@@ -53,7 +53,7 @@ specifiers:
   react-router: 6.3.0
   react-router-dom: ^6.3.0
   rsuite: 5.17.0-beta.1
-  rsuite-table: ^5.6.1
+  rsuite-table: ^5.7.0
   typescript: ^4.6.4
   url-loader: ^4.1.1
   webpack: ^5.73.0
@@ -75,7 +75,7 @@ dependencies:
   react-router: 6.3.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
   rsuite: 5.17.0-beta.1_biqbaboplfbrettd7655fr4n2y
-  rsuite-table: 5.6.1_v2m5e27vhdewzwhryxwfaorcca
+  rsuite-table: 5.7.0_v2m5e27vhdewzwhryxwfaorcca
 
 devDependencies:
   '@babel/cli': 7.18.10_@babel+core@7.18.10
@@ -7314,8 +7314,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rsuite-table/5.6.1_v2m5e27vhdewzwhryxwfaorcca:
-    resolution: {integrity: sha512-keC+1juRl7oTDjzoU3KmHApDInckVVhYsN+KsG2aCee0UVwBL8o15mJxz39DtR7tuCDQfmCnLZ8YomwZhaXAlg==}
+  /rsuite-table/5.7.0_v2m5e27vhdewzwhryxwfaorcca:
+    resolution: {integrity: sha512-SfWOikM0m2cII4iInnSv05gCymSRQgegV9DpV8CBxP9u+dE/nd3fUvG+JMmyEEhBI2jJlf0IyLZq/b6jSZD4wQ==}
     peerDependencies:
       prop-types: ^15.7.2
       react: '>=16.8.0'
@@ -7354,7 +7354,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-virtualized: 9.22.3_biqbaboplfbrettd7655fr4n2y
-      rsuite-table: 5.6.1_v2m5e27vhdewzwhryxwfaorcca
+      rsuite-table: 5.7.0_v2m5e27vhdewzwhryxwfaorcca
       schema-typed: 2.0.3
     dev: false
 
