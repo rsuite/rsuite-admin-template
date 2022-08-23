@@ -5,7 +5,7 @@ import { CustomProvider } from 'rsuite';
 import enGB from 'rsuite/locales/en_GB';
 import { Icon } from '@rsuite/icons';
 import { VscTable } from 'react-icons/vsc';
-import { MdFingerprint, MdDashboard } from 'react-icons/md';
+import { MdFingerprint, MdDashboard, MdModeEditOutline } from 'react-icons/md';
 import locales from './locales';
 import Frame from './components/Frame';
 import DashboardPage from './pages/dashboard';
@@ -15,6 +15,7 @@ import SignInPage from './pages/authentication/sign-in';
 import SignUpPage from './pages/authentication/sign-up';
 import MembersPage from './pages/tables/members';
 import VirtualizedTablePage from './pages/tables/virtualized';
+import FormBasicPage from './pages/forms/basic';
 
 const appNavs = [
   {
@@ -38,6 +39,24 @@ const appNavs = [
         eventKey: 'virtualized',
         title: 'Virtualized Table',
         to: '/table-virtualized'
+      }
+    ]
+  },
+  {
+    eventKey: 'forms',
+    icon: <Icon as={MdModeEditOutline} />,
+    title: 'Forms',
+    to: '/form-basic',
+    children: [
+      {
+        eventKey: 'form-basic',
+        title: 'Basic',
+        to: '/form-basic'
+      },
+      {
+        eventKey: 'form-wizard',
+        title: 'Wizard',
+        to: '/form-wizard'
       }
     ]
   },
@@ -86,6 +105,7 @@ const App = () => {
             <Route path="error-500" element={<Error500Page />} />
             <Route path="sign-in" element={<SignInPage />} />
             <Route path="sign-up" element={<SignUpPage />} />
+            <Route path="form-basic" element={<FormBasicPage />} />
           </Route>
           <Route path="*" element={<Error404Page />} />
         </Routes>
