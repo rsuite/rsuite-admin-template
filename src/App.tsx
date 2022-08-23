@@ -16,6 +16,7 @@ import SignUpPage from './pages/authentication/sign-up';
 import MembersPage from './pages/tables/members';
 import VirtualizedTablePage from './pages/tables/virtualized';
 import FormBasicPage from './pages/forms/basic';
+import FormWizardPage from './pages/forms/wizard';
 
 const appNavs = [
   {
@@ -106,6 +107,7 @@ const App = () => {
             <Route path="sign-in" element={<SignInPage />} />
             <Route path="sign-up" element={<SignUpPage />} />
             <Route path="form-basic" element={<FormBasicPage />} />
+            <Route path="form-wizard" element={<FormWizardPage />} />
           </Route>
           <Route path="*" element={<Error404Page />} />
         </Routes>
