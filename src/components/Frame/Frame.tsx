@@ -4,7 +4,6 @@ import { Container, Sidebar, Sidenav, Content, Nav, DOMHelper } from 'rsuite';
 import { Outlet } from 'react-router-dom';
 import NavToggle from './NavToggle';
 import Header from '../Header';
-import CubesIcon from '@rsuite/icons/legacy/Cubes';
 import NavLink from '../NavLink';
 import Brand from '../Brand';
 
@@ -24,6 +23,7 @@ export interface NavItemData {
   title: string;
   icon?: any;
   to?: string;
+  target?: string;
   children?: NavItemData[];
 }
 
@@ -78,15 +78,17 @@ const Frame = (props: FrameProps) => {
                     </Nav.Menu>
                   );
                 }
+
+                if (rest.target === '_blank') {
+                  return (
+                    <Nav.Item key={item.eventKey} {...rest}>
+                      {item.title}
+                    </Nav.Item>
+                  );
+                }
+
                 return <NavItem key={rest.eventKey} {...rest} />;
               })}
-              <Nav.Item
-                href="https://rsuitejs.com/components/overview/"
-                icon={<CubesIcon />}
-                target="_blank"
-              >
-                Components
-              </Nav.Item>
             </Nav>
           </Sidenav.Body>
         </Sidenav>

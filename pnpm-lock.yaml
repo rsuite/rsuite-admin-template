@@ -13,6 +13,10 @@ specifiers:
   '@babel/preset-typescript': ^7.12.7
   '@babel/runtime': ^7.18.9
   '@faker-js/faker': ^7.4.0
+  '@fullcalendar/daygrid': ^5.11.3
+  '@fullcalendar/interaction': ^5.11.3
+  '@fullcalendar/react': ^5.11.2
+  '@fullcalendar/timegrid': ^5.11.3
   '@rsuite/icons': ^1.0.2
   '@svgr/webpack': ^6.3.1
   '@types/jest': ^28.1.4
@@ -29,6 +33,7 @@ specifiers:
   conventional-changelog-cli: ^2.2.2
   css-loader: ^6.7.1
   cssnano: ^5.1.12
+  date-fns: ^2.29.2
   eslint: ^7.25.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-babel: ^5.3.1
@@ -41,6 +46,7 @@ specifiers:
   husky: ^8.0.1
   less: ^4.1.3
   less-loader: ^11.0.0
+  lodash: ^4.17.21
   mini-css-extract-plugin: ^2.6.1
   postcss: ^8.4.14
   prettier: ^2.4.1
@@ -63,9 +69,15 @@ specifiers:
 dependencies:
   '@babel/runtime': 7.18.9
   '@faker-js/faker': 7.4.0
+  '@fullcalendar/daygrid': 5.11.3
+  '@fullcalendar/interaction': 5.11.3
+  '@fullcalendar/react': 5.11.2_biqbaboplfbrettd7655fr4n2y
+  '@fullcalendar/timegrid': 5.11.3
   '@rsuite/icons': 1.0.2_biqbaboplfbrettd7655fr4n2y
   apexcharts: 3.35.4
   classnames: 2.3.1
+  date-fns: 2.29.2
+  lodash: 4.17.21
   prop-types: 15.8.1
   react: 18.2.0
   react-apexcharts: 1.4.0_duwsp7oksndcqyymyvndtwsgoa
@@ -1545,6 +1557,46 @@ packages:
       intl-messageformat: 10.1.1
       tslib: 2.4.0
       typescript: 4.7.4
+    dev: false
+
+  /@fullcalendar/common/5.11.3:
+    resolution: {integrity: sha512-welVwyfQOXQQGfDwBMSfYEPbiO1cPfUD+C7jd3ZoweJR+dSO11ddFugxIQ7dGfABAGZ63oq/+LW9FsmAJezVNg==}
+    dependencies:
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/daygrid/5.11.3:
+    resolution: {integrity: sha512-PCK0y80DRNCzWuC5lGpIWqCgKDvql1ah7rXql5lu+Gn2EeFj15ZQ8diMFjtNIQucEmFaNOXnR05Pgcry1n6Shg==}
+    dependencies:
+      '@fullcalendar/common': 5.11.3
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/interaction/5.11.3:
+    resolution: {integrity: sha512-L955wkDjza62K96ndstvYs2Fd4V0kayTDpqW8W7huFG3Ox8MutpLqKAa2SCaTvcNIlWS4oexGQRiQAaJG7u47A==}
+    dependencies:
+      '@fullcalendar/common': 5.11.3
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/react/5.11.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-OnLvfV406VEQcK4QGN8xR4ro6Manp9dKE7/n9dhs19J1kKpqS1w1sIEYg1dT11njbk0Ob+TdF3cXLDFq73jUlA==}
+    peerDependencies:
+      react: ^16.7.0 || ^17 || ^18
+      react-dom: ^16.7.0 || ^17 || ^18
+    dependencies:
+      '@fullcalendar/common': 5.11.3
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      tslib: 2.4.0
+    dev: false
+
+  /@fullcalendar/timegrid/5.11.3:
+    resolution: {integrity: sha512-SjIj2ZQ7nTyL1RxZkCPvNbuUQ0xHT+gfYJdUL3FT4bPjPJCxWtQ2CL8hxaeNmVozYYuy0yrGTW5Oup2+9IplbA==}
+    dependencies:
+      '@fullcalendar/common': 5.11.3
+      '@fullcalendar/daygrid': 5.11.3
+      tslib: 2.4.0
     dev: false
 
   /@humanwhocodes/config-array/0.5.0:
@@ -3437,8 +3489,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /date-fns/2.29.1:
-    resolution: {integrity: sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw==}
+  /date-fns/2.29.2:
+    resolution: {integrity: sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==}
     engines: {node: '>=0.11'}
     dev: false
 
@@ -7347,7 +7399,7 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/react-virtualized': 9.21.21
       classnames: 2.3.1
-      date-fns: 2.29.1
+      date-fns: 2.29.2
       dom-lib: 3.1.2
       lodash: 4.17.21
       prop-types: 15.8.1

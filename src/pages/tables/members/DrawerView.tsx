@@ -16,7 +16,7 @@ const DrawerView = (props: DrawerProps) => {
   return (
     <Drawer backdrop="static" size="sm" placement="right" onClose={onClose} {...rest}>
       <Drawer.Header>
-        <Drawer.Title>Add Member</Drawer.Title>
+        <Drawer.Title>Add a new member</Drawer.Title>
         <Drawer.Actions>
           <Button onClick={onClose} appearance="primary">
             Confirm
