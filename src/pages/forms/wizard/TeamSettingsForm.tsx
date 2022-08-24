@@ -51,7 +51,9 @@ const TeamSettingsForm = () => {
             name="1"
             onChange={setType}
           >
-            Use images to enhance your post flow
+            Considered to be a bit complicated and advanced for many of today’s projects, GitFlow
+            enables parallel development where developers can work separately from the master branch
+            on features where a feature branch is created from the master branch.
           </RadioTile>
           <RadioTile
             icon={<Icon as={FaGithub} />}
@@ -60,7 +62,8 @@ const TeamSettingsForm = () => {
             name="2"
             onChange={setType}
           >
-            Use images to your post time
+            GitHub Flow is a simpler alternative to GitFlow ideal for smaller teams as they don’t
+            need to manage multiple versions.
           </RadioTile>
 
           <RadioTile
@@ -70,7 +73,8 @@ const TeamSettingsForm = () => {
             name="3"
             onChange={setType}
           >
-            Use images to enhance time travel rivers
+            GitLab Flow is a simpler alternative to GitFlow that combines feature-driven development
+            and feature branching with issue tracking.
           </RadioTile>
         </Stack>
       </Form.Group>
