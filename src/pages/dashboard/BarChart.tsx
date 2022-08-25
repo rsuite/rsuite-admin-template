@@ -1,9 +1,10 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
-import { Panel } from 'rsuite';
+import { Panel, Stack } from 'rsuite';
 
 interface BarChartProps {
-  title: string;
+  title?: React.ReactNode;
+  actions?: React.ReactNode;
   data: any;
   type?:
     | 'line'
@@ -83,12 +84,20 @@ const defaultOptions = {
   }
 };
 
-const BarChart = ({ title, data, type, labels, options }: BarChartProps) => (
-  <Panel className="card" header={title}>
+const BarChart = ({ title, actions, data, type, labels, options }: BarChartProps) => (
+  <Panel
+    className="card"
+    header={
+      <Stack justifyContent="space-between">
+        {title}
+        {actions}
+      </Stack>
+    }
+  >
     <Chart
       series={data}
       type={type}
-      height={300}
+      height={284}
       options={Object.assign({}, defaultOptions, options, { labels })}
     />
   </Panel>

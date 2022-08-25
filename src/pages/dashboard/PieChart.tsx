@@ -42,7 +42,7 @@ const defaultOptions = {
       colors: undefined
     }
   },
-  colors: ['#206bc4', '#79a6dc', '#f8c174', '#30b344', '#bfe399'],
+  colors: ['#5f71e4', '#2dce88', '#fa6340', '#f5365d', '#13cdef'],
   legend: {
     position: 'bottom',
     offsetY: 0
