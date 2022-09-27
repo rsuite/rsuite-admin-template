@@ -58,7 +58,7 @@ specifiers:
   react-intl: ^6.0.5
   react-router: 6.3.0
   react-router-dom: ^6.3.0
-  rsuite: 5.17.0-beta.2
+  rsuite: 5.19.0-beta.5
   typescript: ^4.6.4
   url-loader: ^4.1.1
   webpack: ^5.73.0
@@ -85,7 +85,7 @@ dependencies:
   react-intl: 6.0.5_qtbnez4q7bzoc4eqybg3efzzxe
   react-router: 6.3.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
-  rsuite: 5.17.0-beta.2_biqbaboplfbrettd7655fr4n2y
+  rsuite: 5.19.0-beta.5_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
   '@babel/cli': 7.18.10_@babel+core@7.18.10
@@ -1968,8 +1968,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/lodash/4.14.183:
-    resolution: {integrity: sha512-UXavyuxzXKMqJPEpFPri6Ku5F9af6ZJXUneHhvQJxavrEjuHkFp2YnDWHcxJiG7hk8ZkWqjcyNeW1s/smZv5cw==}
+  /@types/lodash/4.14.185:
+    resolution: {integrity: sha512-evMDG1bC4rgQg4ku9tKpuMh5iBNEwNa3tf9zRHdP1qlv+1WUg44xat4IxCE14gIpZRGUUWAx2VhItCZc25NfMA==}
     dev: false
 
   /@types/minimatch/3.0.5:
@@ -7348,8 +7348,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rsuite-table/5.7.0_v2m5e27vhdewzwhryxwfaorcca:
-    resolution: {integrity: sha512-SfWOikM0m2cII4iInnSv05gCymSRQgegV9DpV8CBxP9u+dE/nd3fUvG+JMmyEEhBI2jJlf0IyLZq/b6jSZD4wQ==}
+  /rsuite-table/5.7.1_v2m5e27vhdewzwhryxwfaorcca:
+    resolution: {integrity: sha512-TD38Dm1qYwnPHzYr8enZa36WEymElKyRG1qtnaf9aBtWyEROEsHh1xOU8btHy7+nxZFqh/Jr6gw3dQ1KIGX5Uw==}
     peerDependencies:
       prop-types: ^15.7.2
       react: '>=16.8.0'
@@ -7367,8 +7367,8 @@ packages:
       react-is: 17.0.2
     dev: false
 
-  /rsuite/5.17.0-beta.2_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-sSXI+7PyfxGtDzW1wvpWTKGPk13z/IhuUS3hpy9IJ1RYPZwcMxcwA5vZJtgVoUJrENpgCggYPkEEOvFrVi+1dw==}
+  /rsuite/5.19.0-beta.5_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-yjoZXbxyv13D4CxdibLaSWchtNR3FA8GFOKV+L2i++sZQ3p0IIVaWUcebmsmreiqW0QzPAJgG8HfwTpNwvWcOg==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -7377,7 +7377,7 @@ packages:
       '@juggle/resize-observer': 3.3.1
       '@rsuite/icons': 1.0.2_biqbaboplfbrettd7655fr4n2y
       '@types/chai': 4.3.3
-      '@types/lodash': 4.14.183
+      '@types/lodash': 4.14.185
       '@types/prop-types': 15.7.5
       '@types/react-window': 1.8.5
       classnames: 2.3.1
@@ -7388,7 +7388,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-window: 1.8.7_biqbaboplfbrettd7655fr4n2y
-      rsuite-table: 5.7.0_v2m5e27vhdewzwhryxwfaorcca
+      rsuite-table: 5.7.1_v2m5e27vhdewzwhryxwfaorcca
       schema-typed: 2.0.3
     dev: false
 
