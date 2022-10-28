@@ -58,7 +58,7 @@ specifiers:
   react-intl: ^6.0.5
   react-router: 6.3.0
   react-router-dom: ^6.3.0
-  rsuite: 5.20.0-beta.6
+  rsuite: 5.21.0
   typescript: ^4.6.4
   url-loader: ^4.1.1
   webpack: ^5.73.0
@@ -85,7 +85,7 @@ dependencies:
   react-intl: 6.0.5_qtbnez4q7bzoc4eqybg3efzzxe
   react-router: 6.3.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
-  rsuite: 5.20.0-beta.6_biqbaboplfbrettd7655fr4n2y
+  rsuite: 5.21.0_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
   '@babel/cli': 7.18.10_@babel+core@7.18.10
@@ -7379,8 +7379,8 @@ packages:
       react-is: 17.0.2
     dev: false
 
-  /rsuite/5.20.0-beta.6_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-pWfJJNaINukfzX2Yo8ImSG9G0pnJMTnY7Jpo3ub0N/U5/GgqIORTz1A6J4kRlSlTPIEHnzrW3fpFcGKTvq/tZg==}
+  /rsuite/5.21.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-mSEGFRHzVMPmEY7lj+gCmwsJxITDo/WarbJILf+ohQicQYRI/RdVLavoHsBWeg6Qen4Y/o1Ts89KxokA7igEuA==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
