@@ -12,6 +12,7 @@ import {
   Button
 } from 'rsuite';
 import NoticeIcon from '@rsuite/icons/Notice';
+import GearIcon from '@rsuite/icons/Gear';
 import HelpOutlineIcon from '@rsuite/icons/HelpOutline';
 import GithubIcon from '@rsuite/icons/legacy/Github';
 import HeartIcon from '@rsuite/icons/legacy/HeartO';
@@ -43,6 +44,31 @@ const renderAdminSpeaker = ({ onClose, left, top, className }: any, ref) => {
         >
           Help{' '}
         </Dropdown.Item>
+      </Dropdown.Menu>
+    </Popover>
+  );
+};
+
+const renderSettingSpeaker = ({ onClose, left, top, className }: any, ref) => {
+  const handleSelect = eventKey => {
+    onClose();
+    console.log(eventKey);
+  };
+  return (
+    <Popover ref={ref} className={className} style={{ left, top }} full>
+      <Dropdown.Menu onSelect={handleSelect}>
+        <Dropdown.Item panel style={{ padding: 10, width: 160 }}>
+          <strong>Settings</strong>
+        </Dropdown.Item>
+        <Dropdown.Item>Applications</Dropdown.Item>
+        <Dropdown.Item>Projects</Dropdown.Item>
+        <Dropdown.Item divider />
+        <Dropdown.Item>Members</Dropdown.Item>
+        <Dropdown.Item>Teams</Dropdown.Item>
+        <Dropdown.Item>Channels</Dropdown.Item>
+        <Dropdown.Item divider />
+        <Dropdown.Item>Integrations</Dropdown.Item>
+        <Dropdown.Item>Customize</Dropdown.Item>
       </Dropdown.Menu>
     </Popover>
   );
@@ -112,6 +138,10 @@ const Header = () => {
             </Badge>
           }
         />
+      </Whisper>
+
+      <Whisper placement="bottomEnd" trigger="click" ref={trigger} speaker={renderSettingSpeaker}>
+        <IconButton icon={<GearIcon style={{ fontSize: 20 }} />} />
       </Whisper>
 
       <Whisper placement="bottomEnd" trigger="click" ref={trigger} speaker={renderAdminSpeaker}>
