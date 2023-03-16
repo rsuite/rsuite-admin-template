@@ -58,7 +58,7 @@ specifiers:
   react-intl: ^6.0.5
   react-router: 6.3.0
   react-router-dom: ^6.3.0
-  rsuite: 5.23.0
+  rsuite: 5.28.2
   typescript: ^4.6.4
   url-loader: ^4.1.1
   webpack: ^5.73.0
@@ -85,7 +85,7 @@ dependencies:
   react-intl: 6.0.5_qtbnez4q7bzoc4eqybg3efzzxe
   react-router: 6.3.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
-  rsuite: 5.23.0_biqbaboplfbrettd7655fr4n2y
+  rsuite: 5.28.2_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
   '@babel/cli': 7.18.10_@babel+core@7.18.10
@@ -7364,8 +7364,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rsuite-table/5.8.1_v2m5e27vhdewzwhryxwfaorcca:
-    resolution: {integrity: sha512-a9VWkkUMlPvT+V+iMlNwE24HpJuYH7JuMURh3CJAZ//cYI3aKV31zSwwiunJvBmsREMgYVuXy1bXKraQz4bZyg==}
+  /rsuite-table/5.10.0_v2m5e27vhdewzwhryxwfaorcca:
+    resolution: {integrity: sha512-fdU63wbFrSLNCshNRSKhEO7aCwBFzCQjRc+5FhGWMwsn/ToS9jLV5jEO/IZrmAWC1m2JTglCjzh3x6HRVGHvMg==}
     peerDependencies:
       prop-types: ^15.7.2
       react: '>=16.8.0'
@@ -7383,8 +7383,8 @@ packages:
       react-is: 17.0.2
     dev: false
 
-  /rsuite/5.23.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-7m8f1I7e+a9YZbx8IVuMSksgNA6Oa5Qsfo5UnNiM2hhtzJcva1WKbkuCMQjTEdMJDRBStTsq037dqh+ZdWmAxA==}
+  /rsuite/5.28.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-IYfpCRMQChoDfeO96r3i2r7nucKpDQYhDSEk8lfVz9B5uOd9W4jlERXwvv8oC06VzRF67XYv27sFvc8lkccF5g==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -7404,8 +7404,8 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-window: 1.8.8_biqbaboplfbrettd7655fr4n2y
-      rsuite-table: 5.8.1_v2m5e27vhdewzwhryxwfaorcca
-      schema-typed: 2.0.3
+      rsuite-table: 5.10.0_v2m5e27vhdewzwhryxwfaorcca
+      schema-typed: 2.1.2
     dev: false
 
   /run-parallel/1.2.0:
@@ -7443,10 +7443,8 @@ packages:
       loose-envify: 1.4.0
     dev: false
 
-  /schema-typed/2.0.3:
-    resolution: {integrity: sha512-4KckVnJjTtVugYpSAoQrcH4quE4yIVTvI/nHEqtwdceBr/ZCuH2LfV8/gaZFrYU7cwwyufLKaswt28aqQ1T9ww==}
-    dependencies:
-      '@babel/runtime': 7.20.5
+  /schema-typed/2.1.2:
+    resolution: {integrity: sha512-5BCduF1qt9ch2kEqc3/4Jj0mZfUzh+E8iIto5AViOwgReCho2yiT1LlQJ/5KQ1MTkthD8EDokLA/BlhbYow7Bw==}
     dev: false
 
   /schema-utils/1.0.0:
