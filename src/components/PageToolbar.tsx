@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Affix, Stack, DateRangePicker, InputPicker, IconButton } from 'rsuite';
+import { Affix, Stack, DateRangePicker, IconButton, SelectPicker } from 'rsuite';
 import SettingIcon from '@rsuite/icons/Setting';
 import subDays from 'date-fns/subDays';
 import startOfWeek from 'date-fns/startOfWeek';
@@ -106,16 +106,17 @@ const PageToolbar = () => {
           position: 'relative',
           background: '#fff',
           marginBottom: 20,
-          padding: 10,
+          padding: 4,
           borderRadius: fixed ? 0 : 6,
           boxShadow: fixed ? '0 0 15px 0 rgb(0 0 0 / 10%)' : undefined
         }}
       >
         <Stack spacing={10}>
-          <InputPicker
+          <SelectPicker
             defaultValue="Daily"
             cleanable={false}
-            style={{ width: 100 }}
+            searchable={false}
+            appearance="subtle"
             container={() => containerRef.current as HTMLDivElement}
             data={[
               { label: 'Daily', value: 'Daily' },
@@ -124,6 +125,7 @@ const PageToolbar = () => {
             ]}
           />
           <DateRangePicker
+            appearance="subtle"
             defaultValue={[new Date(), new Date()]}
             showOneCalendar
             ranges={predefinedRanges}
