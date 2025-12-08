@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import classNames from 'classnames';
-import { Container, Sidebar, Sidenav, Content, Nav, DOMHelper } from 'rsuite';
-import { Outlet } from 'react-router-dom';
-import NavToggle from './NavToggle';
-import Header from '../Header';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+'use client';
+
+import React, { useState } from 'react';
+import { Container, Sidebar, Sidenav, Content, Nav, useMediaQuery } from 'rsuite';
 import NavLink from '../NavLink';
 import Brand from '../Brand';
+import SidebarFooter from './SidebarFooter';
 
-const { getHeight, on } = DOMHelper;
-
-const NavItem = props => {
+const NavItem = (props: any) => {
   const { title, eventKey, ...rest } = props;
   return (
     <Nav.Item eventKey={eventKey} as={NavLink} {...rest}>
@@ -34,44 +32,30 @@ export interface FrameProps {
 
 const Frame = (props: FrameProps) => {
   const { navs } = props;
-  const [expand, setExpand] = useState(true);
-  const [windowHeight, setWindowHeight] = useState(getHeight(window));
-
-  useEffect(() => {
-    setWindowHeight(getHeight(window));
-    const resizeListenner = on(window, 'resize', () => setWindowHeight(getHeight(window)));
-
-    return () => {
-      resizeListenner.off();
-    };
-  }, []);
-
-  const containerClasses = classNames('page-container', {
-    'container-full': !expand
-  });
-
-  const navBodyStyle: React.CSSProperties = expand
-    ? { height: windowHeight - 112, overflow: 'auto' }
-    : {};
+  const [expanded, setExpanded] = useState(true);
+  const [activeKey, setActiveKey] = useState('1');
+  const [isMobile] = useMediaQuery('(max-width: 768px)');
+  const isExpanded = expanded && !isMobile;
 
   return (
     <Container className="frame">
-      <Sidebar
-        style={{ display: 'flex', flexDirection: 'column' }}
-        width={expand ? 260 : 56}
-        collapsible
-      >
-        <Sidenav.Header>
-          <Brand />
-        </Sidenav.Header>
-        <Sidenav expanded={expand} appearance="subtle" defaultOpenKeys={['2', '3']}>
-          <Sidenav.Body style={navBodyStyle}>
-            <Nav>
+      <Sidebar h="100vh" width={isExpanded ? 260 : 56} collapsible>
+        <Sidenav expanded={isExpanded} defaultOpenKeys={['2', '3']} h="100%" appearance="subtle">
+          <Sidenav.Header borderBottom="1px solid var(--rs-divider-border)">
+            <Brand collapsed={!isExpanded} />
+          </Sidenav.Header>
+          <Sidenav.Body>
+            <Nav activeKey={activeKey} onSelect={setActiveKey}>
               {navs.map(item => {
                 const { children, ...rest } = item;
                 if (children) {
                   return (
-                    <Nav.Menu key={item.eventKey} placement="rightStart" trigger="hover" {...rest}>
+                    <Nav.Menu
+                      key={item.eventKey}
+                      title={item.title}
+                      icon={item.icon}
+                      eventKey={item.eventKey}
+                    >
                       {children.map(child => {
                         return <NavItem key={child.eventKey} {...child} />;
                       })}
@@ -81,7 +65,7 @@ const Frame = (props: FrameProps) => {
 
                 if (rest.target === '_blank') {
                   return (
-                    <Nav.Item key={item.eventKey} {...rest}>
+                    <Nav.Item key={item.eventKey} icon={item.icon} {...rest}>
                       {item.title}
                     </Nav.Item>
                   );
@@ -91,15 +75,12 @@ const Frame = (props: FrameProps) => {
               })}
             </Nav>
           </Sidenav.Body>
+          <SidebarFooter isExpanded={isExpanded} onToggle={() => setExpanded(!expanded)} />
         </Sidenav>
-        <NavToggle expand={expand} onChange={() => setExpand(!expand)} />
       </Sidebar>
 
-      <Container className={containerClasses}>
-        <Header />
-        <Content>
-          <Outlet />
-        </Content>
+      <Container>
+        <Content>{props.children}</Content>
       </Container>
     </Container>
   );

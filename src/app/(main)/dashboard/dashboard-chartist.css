@@ -1,0 +1,50 @@
+.ct-chart-magenta {
+  background: linear-gradient(
+    60deg,
+    var(--chart-magenta-from, #ec407a),
+    var(--chart-magenta-to, #d81b60)
+  );
+}
+
+.ct-chart-orange {
+  background: linear-gradient(
+    60deg,
+    var(--chart-orange-from, #ffa726),
+    var(--chart-orange-to, #fb8c00)
+  );
+}
+
+.ct-chart-azure {
+  background: linear-gradient(
+    60deg,
+    var(--chart-azure-from, #26c6da),
+    var(--chart-azure-to, #00acc1)
+  );
+}
+
+.ct-chart-magenta .ct-label,
+.ct-chart-orange .ct-label,
+.ct-chart-azure .ct-label {
+  color: var(--chart-label-color);
+}
+
+.ct-chart-magenta .ct-series-a .ct-bar,
+.ct-chart-magenta .ct-series-a .ct-slice-donut,
+.ct-chart-magenta .ct-series-a .ct-line,
+.ct-chart-magenta .ct-series-a .ct-point,
+.ct-chart-orange .ct-series-a .ct-bar,
+.ct-chart-orange .ct-series-a .ct-slice-donut,
+.ct-chart-orange .ct-series-a .ct-line,
+.ct-chart-orange .ct-series-a .ct-point,
+.ct-chart-azure .ct-series-a .ct-bar,
+.ct-chart-azure .ct-series-a .ct-slice-donut,
+.ct-chart-azure .ct-series-a .ct-line,
+.ct-chart-azure .ct-series-a .ct-point {
+  stroke: var(--chart-stroke-color);
+}
+
+.ct-chart-magenta .ct-grid,
+.ct-chart-orange .ct-grid,
+.ct-chart-azure .ct-grid {
+  stroke: var(--chart-grid-color);
+}

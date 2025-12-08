@@ -1,11 +1,12 @@
-import React from 'react';
-import { Panel } from 'rsuite';
+import { Panel, PanelProps } from 'rsuite';
+import classNames from 'classnames';
 import Copyright from '@/components/Copyright';
 
-const PageContent = props => {
+const PageContent = (props: PanelProps) => {
+  const { className, ...rest } = props;
   return (
     <>
-      <Panel style={{ background: '#fff' }} {...props} />
+      <Panel as="div" className={classNames('page-content', className)} {...rest} />
       <Copyright />
     </>
   );

@@ -1,0 +1,33 @@
+.rsuite-logo .cls-1 {
+  fill: #6292f0;
+}
+
+.rsuite-logo .cls-2 {
+  fill: #ec727d;
+}
+
+.rsuite-logo .cls-1,
+.rsuite-logo .cls-2 {
+  fill-rule: evenodd;
+}
+
+.rsuite-logo .polyline-limb {
+  animation: limbLineMove 3s ease-out 1;
+}
+
+.rsuite-logo .polyline-axis {
+  animation: axisLineMove 2s ease-out 1;
+}
+
+.rsuite-logo .circle {
+  animation: circleMove 2s ease-out 1;
+}
+
+.logo-animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.logo-animated-delay-half-seconds {
+  animation-delay: 0.5s;
+}

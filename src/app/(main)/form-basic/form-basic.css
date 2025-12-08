@@ -1,0 +1,141 @@
+/* Form Basic Page - Flat Clean Layout */
+
+/* Header Section */
+.form-basic-header {
+  margin-bottom: 40px;
+}
+
+.form-basic-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.form-basic-description {
+  font-size: 0.9375rem;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+.form-basic-description a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.form-basic-description a:hover {
+  text-decoration: underline;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.form-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.form-section .rs-divider {
+  margin: 0 0 24px 0;
+}
+
+/* Full-width form groups (span both columns) */
+.form-group-full {
+  grid-column: 1 / -1;
+}
+.form-group-full.align-center {
+  align-items: center;
+}
+.form-group-full.align-start {
+  align-items: flex-start;
+}
+
+/* Form Group Styling */
+.basic-form .rs-form-group {
+  margin-bottom: 0;
+}
+
+.basic-form .rs-form-control-label-wrapper,
+.basic-form .rs-form-control-label {
+  font-weight: 500;
+  color: var(--form-label-color);
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+}
+
+/* Checkbox and Radio Groups */
+.basic-form .rs-checkbox-group,
+.basic-form .rs-radio-group {
+  padding: 4px 0;
+}
+
+.basic-form .rs-checkbox,
+.basic-form .rs-radio {
+  margin-right: 20px;
+  font-size: 0.875rem;
+}
+
+/* Form Actions */
+.form-actions {
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--divider-color);
+  display: flex;
+}
+
+.form-actions .rs-btn-toolbar {
+  gap: 12px;
+}
+
+.form-actions .rs-btn {
+  min-width: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-group-full {
+    grid-column: 1;
+  }
+
+  .form-basic-title {
+    font-size: 1.5rem;
+  }
+
+  .form-section {
+    margin-bottom: 40px;
+  }
+
+  .form-actions .rs-btn-toolbar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-actions .rs-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-basic-header {
+    margin-bottom: 32px;
+  }
+
+  .form-section {
+    margin-bottom: 32px;
+  }
+
+  .form-grid {
+    gap: 16px;
+  }
+}

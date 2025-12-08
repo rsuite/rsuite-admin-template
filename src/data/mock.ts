@@ -1,12 +1,13 @@
 import { faker } from '@faker-js/faker/locale/en';
 
 export function mockUsers(length: number) {
-  const createRowData = rowIndex => {
+  const createRowData = (rowIndex: number) => {
     const firstName = faker.name.firstName();
     const lastName = faker.name.lastName();
     const gender = faker.name.gender(true) as 'female' | 'male';
-    const name = faker.name.findName(firstName, lastName, gender);
-    const avatar = faker.image.avatar();
+
+    const name = faker.name.fullName({ firstName, lastName, gender });
+    const avatar = `https://i.pravatar.cc/150?u=${faker.datatype.number({ min: 1, max: 10000 })}`;
 
     const city = faker.address.city();
     const street = faker.address.street();
@@ -49,19 +50,19 @@ export function mockUsers(length: number) {
 
 export function mockTreeData(options: {
   limits: number[];
-  labels: string | string[] | ((layer: number, value: string, faker) => string);
+  labels: string | string[] | ((layer: number, value: string, faker: any) => string);
   getRowData?: (layer: number, value: string) => any[];
 }) {
   const { limits, labels, getRowData } = options;
   const depth = limits.length;
 
-  const data = [];
-  const mock = (list, parentValue?: string, layer = 0) => {
+  const data: any[] = [];
+  const mock = (list: any[], parentValue?: string, layer = 0) => {
     const length = limits[layer];
 
     Array.from({ length }).forEach((_, index) => {
       const value = parentValue ? parentValue + '-' + (index + 1) : index + 1 + '';
-      const children = [];
+      const children: any[] = [];
       const label = Array.isArray(labels) ? labels[layer] : labels;
 
       let row: any = {

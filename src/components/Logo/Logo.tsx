@@ -1,18 +1,28 @@
 import React from 'react';
+import { Box, BoxProps } from 'rsuite';
+import classNames from 'classnames';
+import './logo.css';
 
-interface LogoProps {
+interface LogoProps extends BoxProps {
   width?: number;
   height?: number;
   className?: string;
   style?: React.CSSProperties;
 }
 
-export default function Logo({ width, height, style, className = '' }: LogoProps) {
+export default function Logo({ width, height, style, className = '', ...rest }: LogoProps) {
   const styles = { width, height, display: 'inline-block', ...style };
   return (
-    <div
+    <Box
       style={styles}
-      className={`rsuite-logo logo-animated logo-animated-delay-half-seconds bounce-in ${className} `}
+      className={classNames(
+        'rsuite-logo',
+        'logo-animated',
+        'logo-animated-delay-half-seconds',
+        'bounce-in',
+        className
+      )}
+      {...rest}
     >
       <svg
         viewBox="0 0 120 138"
@@ -76,6 +86,6 @@ export default function Logo({ width, height, style, className = '' }: LogoProps
           </g>
         </g>
       </svg>
-    </div>
+    </Box>
   );
 }

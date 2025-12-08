@@ -1,34 +1,55 @@
-# Admin Dashboard Template
+# RSuite Admin Template
 
-Ease developers’ life with the React Suite 5. TypeScript will help with optimizing. Quick start & easily extensible code.
+A Next.js + TypeScript admin dashboard template built with [RSuite](https://rsuitejs.com/).
 
-![preview](./preview-1.png)
+Provides a modern layout, prebuilt pages (dashboard, forms, calendar, auth, error pages) and a themeable design system based on CSS variables and RSuite themes.
 
-![preview](./preview-2.png)
+![preview](https://rsuite-admin-template.vercel.app/images/preview-1.png)
 
-## Development
+![preview](https://rsuite-admin-template.vercel.app/images/preview-2.png)
 
-Fork this repo to your namespace and clone to your local machine.
+## Tech stack
 
+- **Framework**: Next.js (App Router)
+- **UI Library**: RSuite
+- **Language**: TypeScript
+- **Styling**: CSS modules + global CSS variables (light / dark / system themes)
+
+## Getting started
+
+Clone the repository:
+
+```bash
+git clone git@github.com:<YOUR_NAME>/rsuite-admin-template.git
+cd rsuite-admin-template
 ```
-git clone git@github.com:<YOUR NAME>/rsuite-admin-template.git
-$ cd rsuite-admin-template
-```
 
-Install dependencies
+Install dependencies:
 
-```
+```bash
 npm install
 ```
 
-Now you can start the development server by running npm run dev
+Run the development server (default: http://127.0.0.1:3000):
 
-It's serving at http://127.0.0.1:3100/ by default.
-
-```
+```bash
 npm run dev
 ```
 
+## Scripts
+
+- `npm run dev` – Start the development server
+- `npm run build` – Create a production build
+- `npm run start` – Run the production build
+
+## Theming
+
+The template uses CSS variables and RSuite theme tokens to support light, dark and system themes.
+
+- Global variables are defined in `src/app/globals.css`
+- Layout and components consume variables instead of hardcoded colors
+- Theme switching is implemented in the sidebar user menu
+
 ## License
 
-MIT © [simonguo](https://github.com/simonguo)
+MIT

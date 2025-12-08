@@ -1,8 +1,7 @@
-import React from 'react';
 import { Icon } from '@rsuite/icons';
 import { VscTable, VscCalendar } from 'react-icons/vsc';
 import { MdFingerprint, MdDashboard, MdModeEditOutline } from 'react-icons/md';
-import CubesIcon from '@rsuite/icons/legacy/Cubes';
+import { FaCubes } from 'react-icons/fa6';
 
 export const appNavs = [
   {
@@ -95,7 +94,7 @@ export const appNavs = [
   {
     eventKey: 'components',
     title: 'Components',
-    icon: <CubesIcon />,
+    icon: <FaCubes />,
     href: 'https://rsuitejs.com/components/overview/',
     target: '_blank'
   }

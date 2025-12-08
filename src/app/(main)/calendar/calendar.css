@@ -1,0 +1,90 @@
+.rs-container .fc .fc-button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+  border: var(--rs-btn-default-border, none);
+  user-select: none;
+  text-decoration: none;
+  color: var(--rs-btn-default-text);
+  background-color: var(--rs-btn-default-bg);
+  border-radius: 6px;
+  box-shadow: none !important;
+  text-transform: capitalize;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+.rs-container .fc .fc-button:hover {
+  color: var(--rs-btn-default-hover-text);
+  background-color: var(--rs-btn-default-hover-bg);
+  text-decoration: none;
+}
+
+.rs-container .fc .fc-button:active {
+  color: var(--rs-btn-default-active-text);
+  background-color: var(--rs-btn-default-active-bg);
+}
+
+.rs-container .fc .fc-button:disabled {
+  cursor: not-allowed;
+  color: var(--rs-btn-default-disabled-text);
+  background-color: var(--rs-btn-default-disabled-bg);
+}
+
+.rs-container .fc .fc-button.fc-button-active {
+  color: var(--rs-btn-default-active-text) !important;
+  background-color: var(--rs-btn-default-active-bg) !important;
+}
+
+.rs-container .fc .fc-col-header-cell-cushion {
+  font-weight: 500;
+  color: var(--rs-text-primary);
+}
+
+.rs-container .fc .fc-daygrid-day-number {
+  color: var(--rs-text-primary);
+}
+
+.rs-container .fc .fc-scrollgrid {
+  border: none;
+}
+
+.rs-container .fc .fc-scrollgrid td,
+.rs-container .fc .fc-scrollgrid th {
+  border: 1px solid var(--rs-border-secondary);
+}
+
+.rs-container .fc .fc-scrollgrid th {
+  height: 36px;
+  line-height: 36px;
+}
+
+.rs-container .fc .fc-daygrid-event {
+  margin-top: 1px;
+}
+
+.rs-container .fc .fc-daygrid-dot-event {
+  padding: 4px;
+  background-color: var(--rs-btn-default-bg);
+  color: var(--rs-text-primary);
+}
+
+.rs-container .fc .fc-event-main {
+  padding: 4px;
+}
+
+.rs-container .fc .fc-h-event {
+  background-color: var(--rs-btn-primary-bg);
+  color: var(--rs-btn-primary-text);
+  border-color: var(--rs-btn-primary-bg);
+}
+
+.rs-container .fc .fc-event-title {
+  font-weight: 200;
+}

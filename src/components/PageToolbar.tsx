@@ -1,17 +1,22 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Affix, Stack, DateRangePicker, IconButton, SelectPicker } from 'rsuite';
 import SettingIcon from '@rsuite/icons/Setting';
-import subDays from 'date-fns/subDays';
-import startOfWeek from 'date-fns/startOfWeek';
-import endOfWeek from 'date-fns/endOfWeek';
-import addDays from 'date-fns/addDays';
-import startOfMonth from 'date-fns/startOfMonth';
-import endOfMonth from 'date-fns/endOfMonth';
-import addMonths from 'date-fns/addMonths';
+import {
+  subDays,
+  startOfWeek,
+  endOfWeek,
+  addDays,
+  startOfMonth,
+  endOfMonth,
+  addMonths
+} from 'date-fns';
 
-import type { RangeType } from 'rsuite/DateRangePicker';
-
-interface Range extends RangeType {
+interface Range {
+  label: string;
+  // A fixed range or a function range that computes a date range from current value
+  value: [Date, Date] | ((value?: [Date, Date] | null) => [Date, Date]);
+  placement?: 'top' | 'bottom' | 'left' | 'right';
+  closeOverlay?: boolean;
   appearance?: 'default' | 'primary' | 'link' | 'subtle' | 'ghost';
 }
 
@@ -104,11 +109,11 @@ const PageToolbar = () => {
         ref={containerRef}
         style={{
           position: 'relative',
-          background: '#fff',
+          background: 'var(--bg-panel)',
           marginBottom: 20,
           padding: 4,
           borderRadius: fixed ? 0 : 6,
-          boxShadow: fixed ? '0 0 15px 0 rgb(0 0 0 / 10%)' : undefined
+          boxShadow: fixed ? 'var(--toolbar-shadow-elevated)' : undefined
         }}
       >
         <Stack spacing={10}>
@@ -128,7 +133,7 @@ const PageToolbar = () => {
             appearance="subtle"
             defaultValue={[new Date(), new Date()]}
             showOneCalendar
-            ranges={predefinedRanges}
+            ranges={predefinedRanges as any}
             container={() => containerRef.current as HTMLDivElement}
           />
         </Stack>
