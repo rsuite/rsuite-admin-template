@@ -1,4 +1,3 @@
-import React from 'react';
 import toThousands from './toThousands';
 
 const Highlight = ({ value, unit }: { value: string; unit: string }) => (
@@ -7,7 +6,7 @@ const Highlight = ({ value, unit }: { value: string; unit: string }) => (
   </span>
 );
 
-export default function highlightValue(value, fixed) {
+export default function highlightValue(value: number, fixed: number) {
   if (value === null || typeof value === 'undefined') {
     return '--';
   } else if (value === 0) {

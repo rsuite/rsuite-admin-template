@@ -8,7 +8,7 @@ const Copyright = () => {
         <p>
           © 2022, Made with ❤️ by{' '}
           <a href="https://github.com/rsuite/rsuite" target="_blank" rel="noreferrer">
-            RSUITE
+            React Suite
           </a>
         </p>
       </div>

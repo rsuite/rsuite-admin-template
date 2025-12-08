@@ -1,10 +1,15 @@
 import React from 'react';
-import * as errors from '@/images/errors';
+import Image from 'next/image';
 
-const ErrorPage = ({ code = 404, children }) => (
+interface ErrorPageProps {
+  code?: number;
+  children?: React.ReactNode;
+}
+
+const ErrorPage = ({ code = 404, children }: ErrorPageProps) => (
   <div className="error-page">
     <div className="item">
-      <img src={errors[`Error${code}Img`]} />
+      <Image src={`/images/errors/${code}.svg`} alt={`Error ${code}`} width={400} height={300} />
       <div className="text">
         <h1 className="error-page-code">{code}</h1>
         {children}

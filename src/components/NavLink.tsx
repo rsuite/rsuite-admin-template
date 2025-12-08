@@ -1,14 +1,31 @@
+'use client';
+
 import React from 'react';
-import { NavLinkProps, NavLink as BaseNavLink } from 'react-router-dom';
+import Link from 'next/link';
+
+interface NavLinkProps {
+  to?: string;
+  children?: React.ReactNode;
+  [key: string]: any;
+}
 
 const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(
   ({ to, children, ...rest }, ref) => {
+    if (!to) {
+      return (
+        <a ref={ref} {...rest}>
+          {children}
+        </a>
+      );
+    }
     return (
-      <BaseNavLink ref={ref} to={to} {...rest}>
+      <Link ref={ref} href={to} {...rest}>
         {children}
-      </BaseNavLink>
+      </Link>
     );
   }
 );
+
+NavLink.displayName = 'NavLink';
 
 export default NavLink;

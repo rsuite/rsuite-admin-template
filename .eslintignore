@@ -1,11 +1,13 @@
-# editorconfig.org
+# Dependencies
+node_modules
+pnpm-lock.yaml
 
-root = true
+# Build outputs
+.next
+out
+dist
 
-[*]
-charset = utf-8
-end_of_line = lf
-indent_style = space
-indent_size = 2
-trim_trailing_whitespace = true
-insert_final_newline = true
+# Environment files
+.env
+.env.local
+.env.*.local
