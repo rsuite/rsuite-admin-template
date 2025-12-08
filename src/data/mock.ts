@@ -6,7 +6,7 @@ export function mockUsers(length: number) {
     const lastName = faker.name.lastName();
     const gender = faker.name.gender(true) as 'female' | 'male';
 
-    const name = faker.name.fullName({ firstName, lastName, gender });
+    const name = faker.name.fullName({ firstName, lastName, sex: gender });
     const avatar = `https://i.pravatar.cc/150?u=${faker.datatype.number({ min: 1, max: 10000 })}`;
 
     const city = faker.address.city();

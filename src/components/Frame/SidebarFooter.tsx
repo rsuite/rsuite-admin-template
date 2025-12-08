@@ -129,6 +129,10 @@ const SidebarFooter: React.FC<SidebarFooterProps> = () => {
 
   // Apply theme on mount and when theme changes
   useEffect(() => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
+
     const applyTheme = (mode: ThemeMode) => {
       const html = document.documentElement;
 
@@ -144,7 +148,9 @@ const SidebarFooter: React.FC<SidebarFooterProps> = () => {
     };
 
     // Load saved theme from localStorage
-    const savedTheme = localStorage.getItem('theme') as ThemeMode | null;
+    const savedTheme = (typeof window !== 'undefined'
+      ? (localStorage.getItem('theme') as ThemeMode | null)
+      : null);
     if (savedTheme) {
       setTheme(savedTheme);
       applyTheme(savedTheme);

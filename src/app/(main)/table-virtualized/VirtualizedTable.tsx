@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { DOMHelper, Table } from 'rsuite';
 import { mockUsers } from '@/data/mock';
 
@@ -9,10 +10,18 @@ const { getHeight } = DOMHelper;
 const data = mockUsers(1000);
 
 const VirtualizedTable = () => {
+  const [tableHeight, setTableHeight] = useState(600);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setTableHeight(Math.max(getHeight(window) - 120, 400));
+    }
+  }, []);
+
   return (
     <Table
       virtualized
-      height={Math.max(getHeight(window) - 120, 400)}
+      height={tableHeight}
       data={data}
       translate3d={false}
     >

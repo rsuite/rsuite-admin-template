@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useRef } from 'react';
 import { Affix, Stack, DateRangePicker, IconButton, SelectPicker } from 'rsuite';
 import SettingIcon from '@rsuite/icons/Setting';
