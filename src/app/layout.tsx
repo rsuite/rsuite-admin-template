@@ -2,11 +2,18 @@ import React from 'react';
 import { Providers } from './providers';
 import 'rsuite/dist/rsuite.css';
 import './globals.css';
-import './auth.css';
 
 export const metadata = {
-  title: 'RSUITE Admin Template',
-  description: 'RSUITE Management System'
+  title: 'React Suite Admin Template',
+  description: 'A modern React Suite admin dashboard template built with Next.js and RSuite.',
+  keywords: [
+    'React Suite',
+    'RSuite',
+    'admin template',
+    'dashboard',
+    'Next.js',
+    'management system'
+  ]
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

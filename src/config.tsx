@@ -20,17 +20,17 @@ export const appNavs = [
     eventKey: 'tables',
     icon: <Icon as={VscTable} />,
     title: 'Tables',
-    to: '/table-members',
+    to: '/table/members',
     children: [
       {
         eventKey: 'members',
         title: 'Members',
-        to: '/table-members'
+        to: '/table/members'
       },
       {
         eventKey: 'virtualized',
         title: 'Virtualized Table',
-        to: '/table-virtualized'
+        to: '/table/virtualized'
       }
     ]
   },
@@ -38,17 +38,17 @@ export const appNavs = [
     eventKey: 'forms',
     icon: <Icon as={MdModeEditOutline} />,
     title: 'Forms',
-    to: '/form-basic',
+    to: '/form/basic',
     children: [
       {
         eventKey: 'form-basic',
         title: 'Basic',
-        to: '/form-basic'
+        to: '/form/basic'
       },
       {
         eventKey: 'form-wizard',
         title: 'Wizard',
-        to: '/form-wizard'
+        to: '/form/wizard'
       }
     ]
   },
@@ -71,22 +71,22 @@ export const appNavs = [
       {
         eventKey: 'error403',
         title: 'Error 403',
-        to: '/error-403'
+        to: '/error/403'
       },
       {
         eventKey: 'error404',
         title: 'Error 404',
-        to: '/error-404'
+        to: '/error/404'
       },
       {
         eventKey: 'error500',
         title: 'Error 500',
-        to: '/error-500'
+        to: '/error/500'
       },
       {
         eventKey: 'error503',
         title: 'Error 503',
-        to: '/error-503'
+        to: '/error/503'
       }
     ]
   },

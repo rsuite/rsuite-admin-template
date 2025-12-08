@@ -45,7 +45,7 @@ const renderUserMenu = (
   };
 
   return (
-    <Popover ref={ref} className={className} style={{ left, top, width: 280 }}>
+    <Popover ref={ref} className={className} style={{ left, top, width: 280 }} full>
       <HStack spacing={12} style={{ padding: '16px' }}>
         <Avatar size="lg" circle src="https://i.pravatar.cc/150?u=1203827" alt="@admin" />
         <VStack spacing={4} alignItems="flex-start">
@@ -148,9 +148,8 @@ const SidebarFooter: React.FC<SidebarFooterProps> = () => {
     };
 
     // Load saved theme from localStorage
-    const savedTheme = (typeof window !== 'undefined'
-      ? (localStorage.getItem('theme') as ThemeMode | null)
-      : null);
+    const savedTheme =
+      typeof window !== 'undefined' ? (localStorage.getItem('theme') as ThemeMode | null) : null;
     if (savedTheme) {
       setTheme(savedTheme);
       applyTheme(savedTheme);
@@ -190,7 +189,7 @@ const SidebarFooter: React.FC<SidebarFooterProps> = () => {
   return (
     <Sidenav.Footer style={{ padding: 0 }}>
       <Whisper
-        placement="top"
+        placement="topStart"
         trigger="click"
         ref={whisperRef}
         speaker={(props, ref) => renderUserMenu(props, ref, theme, handleThemeChange)}
@@ -201,16 +200,7 @@ const SidebarFooter: React.FC<SidebarFooterProps> = () => {
             <Text weight="semibold" size="sm">
               Administrator
             </Text>
-            <Text
-              size="xs"
-              muted
-              style={{
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-                width: '100%'
-              }}
-            >
+            <Text size="xs" muted width="100%">
               admin@example.com
             </Text>
           </VStack>

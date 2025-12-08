@@ -1,7 +1,7 @@
 {
   "name": "rsuite-admin-template",
   "version": "1.0.0",
-  "description": "RSuite Management System",
+  "description": "React Suite Management System",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib/"
