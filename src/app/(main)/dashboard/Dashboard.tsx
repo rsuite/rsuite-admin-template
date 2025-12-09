@@ -37,7 +37,7 @@ const Dashboard = () => {
   return (
     <>
       <Row gutter={30} className="dashboard-header">
-        <Col xs={8}>
+        <Col span={8}>
           <Panel className="trend-box bg-gradient-red">
             <Image
               className="chart-img"
@@ -50,7 +50,7 @@ const Dashboard = () => {
             <div className="value">281,358</div>
           </Panel>
         </Col>
-        <Col xs={8}>
+        <Col span={8}>
           <Panel className="trend-box bg-gradient-green">
             <Image
               className="chart-img"
@@ -63,7 +63,7 @@ const Dashboard = () => {
             <div className="value">251,901</div>
           </Panel>
         </Col>
-        <Col xs={8}>
+        <Col span={8}>
           <Panel className="trend-box bg-gradient-blue">
             <Image
               className="chart-img"
@@ -79,7 +79,7 @@ const Dashboard = () => {
       </Row>
 
       <Row gutter={30}>
-        <Col xs={16}>
+        <Col span={16}>
           <BarChart
             title="Traffic Summary"
             actions={
@@ -135,7 +135,7 @@ const Dashboard = () => {
             ]}
           />
         </Col>
-        <Col xs={8}>
+        <Col span={8}>
           <PieChart
             title="Traffic Sources"
             data={[112332, 123221, 432334, 342334, 133432]}
@@ -145,10 +145,10 @@ const Dashboard = () => {
         </Col>
       </Row>
       <Row gutter={30}>
-        <Col xs={16}>
+        <Col span={16}>
           <DataTable />
         </Col>
-        <Col xs={8}>
+        <Col span={8}>
           <PieChart
             title="Browsers"
             data={[10000, 3000, 2000, 1000, 900]}
