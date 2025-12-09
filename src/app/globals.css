@@ -165,6 +165,10 @@ body {
   overflow: hidden;
   font-weight: bold;
   text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .card {
