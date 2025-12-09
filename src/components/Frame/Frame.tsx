@@ -6,6 +6,7 @@ import { Container, Sidebar, Sidenav, Content, Nav, useMediaQuery } from 'rsuite
 import NavLink from '../NavLink';
 import Brand from '../Brand';
 import SidebarFooter from './SidebarFooter';
+import './frame.css';
 
 const NavItem = (props: any) => {
   const { title, eventKey, ...rest } = props;

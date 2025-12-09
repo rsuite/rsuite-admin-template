@@ -1,0 +1,19 @@
+.colorful-chart {
+  color: var(--colorful-chart-text);
+  margin-top: 30px;
+  border-radius: 6px;
+}
+
+.colorful-chart h3 {
+  line-height: 22px;
+  text-align: right;
+  color: var(--colorful-chart-title);
+  padding: 10px;
+  font-size: 18px;
+}
+
+
+
+.apexcharts-theme-light .tooltip-custom {
+  color: var(--tooltip-text);
+}

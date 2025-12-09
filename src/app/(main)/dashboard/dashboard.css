@@ -1,0 +1,47 @@
+.dashboard-header .rs-panel {
+  color: #fff;
+}
+
+.dashboard-header .chart-img {
+  width: 100px;
+  position: absolute;
+  left: 26px;
+  top: 34px;
+  opacity: 0.5;
+}
+
+.dashboard-header .trend-box .rs-panel-body {
+  text-align: right;
+}
+
+.dashboard-header .trend-box .rs-panel-body .value {
+  font-size: 36px;
+}
+
+.bg-gradient-orange {
+  background: linear-gradient(
+    87deg,
+    var(--bg-gradient-orange-from) 0,
+    var(--bg-gradient-orange-to) 100%
+  );
+}
+
+.bg-gradient-red {
+  background: linear-gradient(87deg, var(--bg-gradient-red-from) 0, var(--bg-gradient-red-to) 100%);
+}
+
+.bg-gradient-green {
+  background: linear-gradient(
+    87deg,
+    var(--bg-gradient-green-from) 0,
+    var(--bg-gradient-green-to) 100%
+  );
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(
+    87deg,
+    var(--bg-gradient-blue-from) 0,
+    var(--bg-gradient-blue-to) 100%
+  );
+}

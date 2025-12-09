@@ -27,7 +27,7 @@ const WizardForm = () => {
       </Steps>
 
       <Divider />
-      <div className="wizard-form">
+      <div>
         <Form />
 
         <Divider />

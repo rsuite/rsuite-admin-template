@@ -1,8 +1,9 @@
 'use client';
 import dynamic from 'next/dynamic';
 import './dashboard-chartist.css';
+import './dashboard.css';
 import Image from 'next/image';
-import { Row, Col, Panel, ButtonGroup, Button } from 'rsuite';
+import { Row, Col, Panel, SegmentedControl } from 'rsuite';
 
 const BarChart = dynamic(() => import('./BarChart'), { ssr: false });
 const PieChart = dynamic(() => import('./PieChart'), { ssr: false });
@@ -82,11 +83,14 @@ const Dashboard = () => {
           <BarChart
             title="Traffic Summary"
             actions={
-              <ButtonGroup>
-                <Button active>Day</Button>
-                <Button>Week</Button>
-                <Button>Month</Button>
-              </ButtonGroup>
+              <SegmentedControl
+                defaultValue="day"
+                data={[
+                  { label: 'Day', value: 'day' },
+                  { label: 'Week', value: 'week' },
+                  { label: 'Month', value: 'month' }
+                ]}
+              />
             }
             data={barChartData}
             type="bar"

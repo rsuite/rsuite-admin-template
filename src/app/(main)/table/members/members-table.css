@@ -1,0 +1,14 @@
+.rs-table .link-group {
+  cursor: pointer;
+}
+
+.rs-table .link-group .rs-table-cell-content {
+  padding: 5px;
+}
+
+/* Tables - Members */
+.table-toolbar {
+  padding: 20px;
+  background: var(--table-bg);
+  border-radius: 4px 4px 0 0;
+}

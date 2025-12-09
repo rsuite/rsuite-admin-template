@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import './error-page.css';
 
 interface ErrorPageProps {
   code?: number;

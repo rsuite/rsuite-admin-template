@@ -1,0 +1,28 @@
+.error-page {
+  display: flex;
+  height: 100vh;
+  margin-top: -40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page-code {
+  color: var(--text-muted);
+}
+
+.error-page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.error-page-subtitle {
+  margin: 10px 0 20px 0;
+}
+
+.error-page .item img {
+  height: 260px;
+}
+
+.error-page .item .text {
+  text-align: center;
+}

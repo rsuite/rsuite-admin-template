@@ -2,6 +2,7 @@
 
 import classNames from 'classnames';
 import Chart, { Props as ChartProps } from 'react-apexcharts';
+import './colorful-chart.css';
 
 interface ColorfulChartProps {
   className?: string;

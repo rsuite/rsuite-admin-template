@@ -1,15 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import './calendar.css';
 import FullCalendar from '@fullcalendar/react';
 import type { DateSelectArg, EventClickArg, EventContentArg } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import PageContent from '@/components/PageContent';
-import { INITIAL_EVENTS } from './event-utils';
+import { INITIAL_EVENTS } from '@/data/calendarEvents';
 import EventModal from './EventModal';
+import './calendar.css';
 
 const Calendar = () => {
   const [editable, setEditable] = useState(false);

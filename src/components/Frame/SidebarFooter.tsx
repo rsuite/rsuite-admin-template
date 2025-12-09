@@ -194,7 +194,7 @@ const SidebarFooter: React.FC<SidebarFooterProps> = () => {
         ref={whisperRef}
         speaker={(props, ref) => renderUserMenu(props, ref, theme, handleThemeChange)}
       >
-        <HStack spacing={12} cursor="pointer" px={16} py={12} width="100%" className="user-panel">
+        <HStack spacing={12} cursor="pointer" px={16} py={12} width="100%">
           <Avatar size="sm" circle src="https://i.pravatar.cc/150?u=1203827" alt="@admin" />
           <VStack spacing={2} alignItems="flex-start" style={{ flex: 1, minWidth: 0 }}>
             <Text weight="semibold" size="sm">

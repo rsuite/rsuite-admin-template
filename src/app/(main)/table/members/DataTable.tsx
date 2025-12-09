@@ -16,6 +16,7 @@ import { FiSearch, FiMoreVertical } from 'react-icons/fi';
 import DrawerView from './DrawerView';
 import { mockUsers } from '@/data/mock';
 import { NameCell, ImageCell, CheckCell, ActionCell } from './Cells';
+import './members-table.css';
 
 const data = mockUsers(20);
 
